@@ -1,4 +1,4 @@
 name: TheCore
 version: '1.0'
-main: org.leux.thecore.TheCore
+main: org.leux.TheCore
 api-version: 1.19

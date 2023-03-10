@@ -4,11 +4,92 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dde8955a-785f-4236-95b2-4bfbbb7f51b1" name="Changes" comment="" />
+    <list default="true" id="dde8955a-785f-4236-95b2-4bfbbb7f51b1" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/core/src/main/java/org/leux/TheCore.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_MilkBowl_VaultAPI_1_7.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_findbugs_jsr305_3_0_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_gson_gson_2_10.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_errorprone_error_prone_annotations_2_11_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_failureaccess_1_0_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_guava_31_1_jre.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_listenablefuture_9999_0_empty_to_avoid_conflict_with_guava.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_j2objc_j2objc_annotations_1_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_googlecode_json_simple_json_simple_1_1_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_lang_commons_lang_2_6.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_10.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__me_clip_placeholderapi_2_11_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_md_5_bungeecord_chat_1_16_R0_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_bukkit_bukkit_1_13_1_R0_1_SNAPSHOT.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_checkerframework_checker_qual_3_12_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jetbrains_annotations_23_0_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_spigotmc_spigot_api_1_19_3_R0_1_SNAPSHOT.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_yaml_snakeyaml_1_33.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheCore.iml" beforeDir="false" afterPath="$PROJECT_DIR$/TheCore.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/api.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/core.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/java/org/leux/thecore/TheCore.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/resources/plugin.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/target/classes/plugin.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/core.iml" beforeDir="false" afterPath="$PROJECT_DIR$/core/core.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/core/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/org/leux/thecore/TheCore.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/resources/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/resources/plugin.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/target/classes/plugin.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/gui.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/src/main/java/dev/triumphteam/gui/builder/gui/BaseGuiBuilder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/src/main/java/dev/triumphteam/gui/builder/gui/PaginatedBuilder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/src/main/java/dev/triumphteam/gui/builder/gui/ScrollingBuilder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/src/main/java/dev/triumphteam/gui/builder/gui/SimpleBuilder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/src/main/java/dev/triumphteam/gui/builder/gui/StorageBuilder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/src/main/java/dev/triumphteam/gui/builder/item/BannerBuilder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/src/main/java/dev/triumphteam/gui/builder/item/BaseItemBuilder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/src/main/java/dev/triumphteam/gui/builder/item/BookBuilder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/src/main/java/dev/triumphteam/gui/builder/item/FireworkBuilder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/src/main/java/dev/triumphteam/gui/builder/item/ItemBuilder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/src/main/java/dev/triumphteam/gui/builder/item/MapBuilder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/src/main/java/dev/triumphteam/gui/builder/item/SkullBuilder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/src/main/java/dev/triumphteam/gui/components/GuiAction.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/src/main/java/dev/triumphteam/gui/components/GuiPage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/src/main/java/dev/triumphteam/gui/components/GuiType.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/src/main/java/dev/triumphteam/gui/components/InteractionModifier.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/src/main/java/dev/triumphteam/gui/components/ScrollType.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/src/main/java/dev/triumphteam/gui/components/Serializable.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/src/main/java/dev/triumphteam/gui/components/exception/GuiException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/src/main/java/dev/triumphteam/gui/components/nbt/LegacyNbt.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/src/main/java/dev/triumphteam/gui/components/nbt/NbtWrapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/src/main/java/dev/triumphteam/gui/components/nbt/Pdc.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/src/main/java/dev/triumphteam/gui/components/util/GuiFiller.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/src/main/java/dev/triumphteam/gui/components/util/ItemNbt.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/src/main/java/dev/triumphteam/gui/components/util/Legacy.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/src/main/java/dev/triumphteam/gui/components/util/SkullUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/src/main/java/dev/triumphteam/gui/components/util/VersionHelper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/src/main/java/dev/triumphteam/gui/guis/BaseGui.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/src/main/java/dev/triumphteam/gui/guis/Gui.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/src/main/java/dev/triumphteam/gui/guis/GuiItem.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/src/main/java/dev/triumphteam/gui/guis/GuiListener.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/src/main/java/dev/triumphteam/gui/guis/InteractionModifierListener.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/src/main/java/dev/triumphteam/gui/guis/PaginatedGui.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/src/main/java/dev/triumphteam/gui/guis/PersistentPaginatedGui.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/src/main/java/dev/triumphteam/gui/guis/ScrollingGui.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/src/main/java/dev/triumphteam/gui/guis/StorageGui.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packaging/packaging.iml" beforeDir="false" afterPath="$PROJECT_DIR$/packaging/packaging.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packaging/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/packaging/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
   </component>
   <component name="CompilerWorkspaceConfiguration">
     <option name="MAKE_PROJECT_ON_SAVE" value="true" />
@@ -17,8 +98,12 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Tag Library Descriptor" />
+        <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="GoLibraries">
+    <option name="indexEntireGoPath" value="true" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -30,7 +115,13 @@
       </MavenGeneralSettings>
     </option>
   </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="2" />
+  </component>
   <component name="ProjectId" id="2MhaYj6rQozJ3m7XmZjLOcoiB2Q" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -39,10 +130,23 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.go.formatter.settings.were.checked": "true",
+    "RunOnceActivity.go.migrated.go.modules.settings": "true",
     "WebServerToolWindowFactoryState": "false",
+    "go.import.settings.migrated": "true",
     "jdk.selected.com.intellij.ui.dsl.builder.impl.RowImpl.sdk": "corretto-17",
-    "last_opened_file_path": "C:/Users/Marti/IdeaProjects/TheCore",
-    "settings.editor.selected.configurable": "editor.preferences.completion"
+    "last_directory_selection": "A:/GitHub/TheCore/core/src/main/java/org/leux/thecore/listeners",
+    "last_opened_file_path": "A:/GitHub/TheCore/core/src/main/resources",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.39195403",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
     "jdk.preference.com.intellij.ui.dsl.builder.impl.RowImpl.sdk": [
@@ -52,11 +156,25 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="A:\GitHub\TheCore\core\src\main\resources" />
+      <recent name="A:\GitHub\TheCore\core\src\main\java\org\leux\theapi" />
+      <recent name="A:\GitHub\TheCore" />
+      <recent name="A:\GitHub\TheCore\core\src\main\java\org\leux\thecore" />
       <recent name="C:\Users\Marti\IdeaProjects\TheCore" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Marti\IdeaProjects\TheCore\gui" />
-      <recent name="C:\Users\Marti\IdeaProjects\TheCore\core" />
+      <recent name="A:\GitHub\TheCore\gui\src\main\java\dev\triumphteam\gui" />
+      <recent name="A:\GitHub\TheCore\gui" />
+      <recent name="A:\GitHub\TheCore\core\src" />
+      <recent name="A:\GitHub\TheCore\core" />
+      <recent name="A:\GitHub\TheCore" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.leux.Event" />
+      <recent name="org.leux.theapi" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -68,7 +186,22 @@
       <option name="presentableId" value="Default" />
       <updated>1678222321874</updated>
       <workItem from="1678222323048" duration="6954000" />
+      <workItem from="1678418963950" duration="1242000" />
+      <workItem from="1678420624228" duration="7525000" />
+      <workItem from="1678451745893" duration="1417000" />
+      <workItem from="1678454418726" duration="1156000" />
+      <workItem from="1678456459007" duration="17887000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="dependencySupport" implementationName="java:org.spigotmc:spigot-api" />
+  </component>
+  <component name="VgoProject">
+    <integration-enabled>false</integration-enabled>
+    <settings-migrated>true</settings-migrated>
   </component>
 </project>

@@ -8,17 +8,17 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="core" />
-        <module name="gui" />
         <module name="packaging" />
-        <module name="api" />
+        <module name="gui" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="api" target="1.8" />
+      <module name="api" target="1.5" />
       <module name="core" target="1.8" />
       <module name="gui" target="1.8" />
       <module name="gui (1)" target="1.8" />
       <module name="packaging" target="1.8" />
+      <module name="TheApi" target="1.8" />
       <module name="TheCore" target="1.8" />
     </bytecodeTargetLevel>
   </component>
