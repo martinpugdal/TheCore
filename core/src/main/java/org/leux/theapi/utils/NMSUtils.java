@@ -14,12 +14,7 @@ import org.bukkit.Bukkit;
  */
 public class NMSUtils {
 
-    private static String nmsVersion;
-
-    static {
-        nmsVersion = Bukkit.getServer().getClass().getPackage().getName();
-        nmsVersion = nmsVersion.substring(nmsVersion.lastIndexOf(".") + 1);
-    }
+    private static final String nmsVersion = Bukkit.getServer().getClass().getPackage().getName().substring(Bukkit.getServer().getClass().getPackage().getName().lastIndexOf(".") + 1);;
 
     /**
      * You cannot instantiate this class

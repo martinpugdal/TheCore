@@ -26,8 +26,8 @@ public class PlayerInteract implements Listener {
             Player player = event.getPlayer();
             if (player.getItemInHand() != null && player.getItemInHand().getType() == Material.ANVIL) {
                 Block block = event.getClickedBlock().getRelative(event.getBlockFace());
-                if (block.getType().toString().equals("SKULL")) {
-                    SkullGriefingEvent eventSG = new SkullGriefingEvent(player, block);
+                if (block.getType().toString().endsWith("SKULL")) {
+                    SkullGriefingEvent eventSG = new SkullGriefingEvent(player);
                     eventSG.call();
                     if (!eventSG.isCancelled()) {
                         event.setCancelled(true);

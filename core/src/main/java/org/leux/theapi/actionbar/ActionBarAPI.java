@@ -22,6 +22,26 @@ import java.util.Objects;
  */
 public class ActionBarAPI {
 
+    static private final Class<?> craftPlayerClass;
+    static private final Class<?> packetPlayOutChatClass;
+    static private final Class<?> chatComponentTextClass;
+    static private final Class<?> iChatBaseComponentClass;
+    static private final Class<?> chatMessageTypeClass;
+    static private final Method craftPlayerHandleMethod;
+
+    static {
+        try {
+            craftPlayerClass = Class.forName("org.bukkit.craftbukkit." + NMSUtils.getNMSVersion() + ".entity.CraftPlayer");
+            packetPlayOutChatClass = NMSUtils.getNMSClass("PacketPlayOutChat");
+            chatComponentTextClass = NMSUtils.getNMSClass("ChatComponentText");
+            iChatBaseComponentClass = NMSUtils.getNMSClass("IChatBaseComponent");
+            chatMessageTypeClass = NMSUtils.getNMSClassOrNull("ChatMessageType");
+            craftPlayerHandleMethod = craftPlayerClass.getDeclaredMethod("getHandle");
+        } catch (ClassNotFoundException | NoSuchMethodException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
     /**
      * Sends an actionbar message to a player
      *
@@ -33,15 +53,9 @@ public class ActionBarAPI {
         if (!player.isOnline()) {
             return; // Player may have logged out
         }
-
         try {
-            Class<?> craftPlayerClass = Class.forName("org.bukkit.craftbukkit." + NMSUtils.getNMSVersion() + ".entity.CraftPlayer");
             Object craftPlayer = craftPlayerClass.cast(player);
             Object packet;
-            Class<?> packetPlayOutChatClass = NMSUtils.getNMSClass("PacketPlayOutChat");
-            Class<?> chatComponentTextClass = NMSUtils.getNMSClass("ChatComponentText");
-            Class<?> iChatBaseComponentClass = NMSUtils.getNMSClass("IChatBaseComponent");
-            Class<?> chatMessageTypeClass = NMSUtils.getNMSClassOrNull("ChatMessageType");
             if (chatMessageTypeClass != null) {
                 Object[] chatMessageTypes = chatMessageTypeClass.getEnumConstants();
                 Object chatMessageType = null;
@@ -56,8 +70,6 @@ public class ActionBarAPI {
                 Object chatComponentText = Objects.requireNonNull(chatComponentTextClass).getConstructor(new Class<?>[]{String.class}).newInstance(message);
                 packet = Objects.requireNonNull(packetPlayOutChatClass).getConstructor(new Class<?>[]{iChatBaseComponentClass, byte.class}).newInstance(chatComponentText, (byte) 2);
             }
-
-            Method craftPlayerHandleMethod = craftPlayerClass.getDeclaredMethod("getHandle");
             Object craftPlayerHandle = craftPlayerHandleMethod.invoke(craftPlayer);
             Field playerConnectionField = craftPlayerHandle.getClass().getDeclaredField("playerConnection");
             Object playerConnection = playerConnectionField.get(craftPlayerHandle);

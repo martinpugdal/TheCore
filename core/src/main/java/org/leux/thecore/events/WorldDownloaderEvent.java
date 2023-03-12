@@ -1,16 +1,14 @@
 package org.leux.thecore.events;
 
-import org.bukkit.block.Block;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Cancellable;
 import org.leux.theapi.event.CallableEvent;
 
-public class SkullGriefingEvent extends CallableEvent implements Cancellable {
-
+public class WorldDownloaderEvent extends CallableEvent implements Cancellable {
     private boolean isCancelled = false;
     private final Player player;
 
-    public SkullGriefingEvent(Player player) {
+    public WorldDownloaderEvent(Player player) {
         this.player = player;
     }
 

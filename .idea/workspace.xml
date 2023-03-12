@@ -5,83 +5,46 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dde8955a-785f-4236-95b2-4bfbbb7f51b1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/core/src/main/java/org/leux/TheCore.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_MilkBowl_VaultAPI_1_7.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_findbugs_jsr305_3_0_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_gson_gson_2_10.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_errorprone_error_prone_annotations_2_11_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_failureaccess_1_0_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_guava_31_1_jre.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_listenablefuture_9999_0_empty_to_avoid_conflict_with_guava.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_j2objc_j2objc_annotations_1_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_googlecode_json_simple_json_simple_1_1_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_lang_commons_lang_2_6.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_10.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__me_clip_placeholderapi_2_11_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_md_5_bungeecord_chat_1_16_R0_4.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_bukkit_bukkit_1_13_1_R0_1_SNAPSHOT.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_checkerframework_checker_qual_3_12_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jetbrains_annotations_23_0_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_spigotmc_spigot_api_1_19_3_R0_1_SNAPSHOT.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_yaml_snakeyaml_1_33.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/ActionAPI.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TheCore.iml" beforeDir="false" afterPath="$PROJECT_DIR$/TheCore.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/api.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/core.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/main/java/org/leux/thecore/TheCore.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/main/resources/plugin.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/target/classes/plugin.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/core.iml" beforeDir="false" afterPath="$PROJECT_DIR$/core/core.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/core/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/java/org/leux/thecore/TheCore.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/resources/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/resources/plugin.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/target/classes/plugin.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheCore.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/core.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/org/leux/TheCore.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/org/leux/TheCore.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/org/leux/theapi/actionbar/ActionBarAPI.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/org/leux/theapi/actionbar/ActionBarAPI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/org/leux/theapi/utils/FileUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/org/leux/theapi/utils/FileUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/org/leux/theapi/utils/NMSUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/org/leux/theapi/utils/NMSUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/org/leux/thecore/events/SkullGriefingEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/org/leux/thecore/events/SkullGriefingEvent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/org/leux/thecore/listener/Listener.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/org/leux/thecore/listener/Listener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/org/leux/thecore/listener/custom/SkullGriefing.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/org/leux/thecore/listener/custom/SkullGriefing.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/org/leux/thecore/listener/spigot/player/PlayerInteract.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/org/leux/thecore/listener/spigot/player/PlayerInteract.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/target/classes/org/leux/TheCore.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/target/classes/org/leux/TheCore.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/target/classes/org/leux/theapi/utils/FileUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/target/classes/org/leux/theapi/utils/FileUtils.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/target/classes/org/leux/thecore/events/SkullGriefingEvent.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/target/classes/org/leux/thecore/events/SkullGriefingEvent.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/target/classes/org/leux/thecore/listener/Listener.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/target/classes/org/leux/thecore/listener/Listener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/target/classes/org/leux/thecore/listener/custom/SkullGriefing.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/target/classes/org/leux/thecore/listener/custom/SkullGriefing.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/target/classes/org/leux/thecore/listener/spigot/player/PlayerInteract.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/target/classes/org/leux/thecore/listener/spigot/player/PlayerInteract.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/target/core-1.0-shaded.jar" beforeDir="false" afterPath="$PROJECT_DIR$/core/target/core-1.0-shaded.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/target/core-1.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/core/target/core-1.0.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/core/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/core/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/target/original-core-1.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/core/target/original-core-1.0.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gui/gui.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gui/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gui/src/main/java/dev/triumphteam/gui/builder/gui/BaseGuiBuilder.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gui/src/main/java/dev/triumphteam/gui/builder/gui/PaginatedBuilder.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gui/src/main/java/dev/triumphteam/gui/builder/gui/ScrollingBuilder.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gui/src/main/java/dev/triumphteam/gui/builder/gui/SimpleBuilder.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gui/src/main/java/dev/triumphteam/gui/builder/gui/StorageBuilder.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gui/src/main/java/dev/triumphteam/gui/builder/item/BannerBuilder.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gui/src/main/java/dev/triumphteam/gui/builder/item/BaseItemBuilder.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gui/src/main/java/dev/triumphteam/gui/builder/item/BookBuilder.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gui/src/main/java/dev/triumphteam/gui/builder/item/FireworkBuilder.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gui/src/main/java/dev/triumphteam/gui/builder/item/ItemBuilder.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gui/src/main/java/dev/triumphteam/gui/builder/item/MapBuilder.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gui/src/main/java/dev/triumphteam/gui/builder/item/SkullBuilder.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gui/src/main/java/dev/triumphteam/gui/components/GuiAction.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gui/src/main/java/dev/triumphteam/gui/components/GuiPage.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gui/src/main/java/dev/triumphteam/gui/components/GuiType.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gui/src/main/java/dev/triumphteam/gui/components/InteractionModifier.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gui/src/main/java/dev/triumphteam/gui/components/ScrollType.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gui/src/main/java/dev/triumphteam/gui/components/Serializable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gui/src/main/java/dev/triumphteam/gui/components/exception/GuiException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gui/src/main/java/dev/triumphteam/gui/components/nbt/LegacyNbt.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gui/src/main/java/dev/triumphteam/gui/components/nbt/NbtWrapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gui/src/main/java/dev/triumphteam/gui/components/nbt/Pdc.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gui/src/main/java/dev/triumphteam/gui/components/util/GuiFiller.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gui/src/main/java/dev/triumphteam/gui/components/util/ItemNbt.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gui/src/main/java/dev/triumphteam/gui/components/util/Legacy.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gui/src/main/java/dev/triumphteam/gui/components/util/SkullUtil.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gui/src/main/java/dev/triumphteam/gui/components/util/VersionHelper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gui/src/main/java/dev/triumphteam/gui/guis/BaseGui.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gui/src/main/java/dev/triumphteam/gui/guis/Gui.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gui/src/main/java/dev/triumphteam/gui/guis/GuiItem.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gui/src/main/java/dev/triumphteam/gui/guis/GuiListener.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gui/src/main/java/dev/triumphteam/gui/guis/InteractionModifierListener.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gui/src/main/java/dev/triumphteam/gui/guis/PaginatedGui.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gui/src/main/java/dev/triumphteam/gui/guis/PersistentPaginatedGui.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gui/src/main/java/dev/triumphteam/gui/guis/ScrollingGui.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gui/src/main/java/dev/triumphteam/gui/guis/StorageGui.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packaging/packaging.iml" beforeDir="false" afterPath="$PROJECT_DIR$/packaging/packaging.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packaging/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/packaging/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/target/gui-1.0-shaded.jar" beforeDir="false" afterPath="$PROJECT_DIR$/gui/target/gui-1.0-shaded.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/target/gui-1.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/gui/target/gui-1.0.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/gui/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/gui/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/target/original-gui-1.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/gui/target/original-gui-1.0.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packaging/packaging.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packaging/target/TheCore-1.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/packaging/target/TheCore-1.0.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packaging/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packaging/target/original-TheCore-1.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packaging/target/packaging-1.0-shaded.jar" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,6 +64,9 @@
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GoLibraries">
     <option name="indexEntireGoPath" value="true" />
@@ -126,34 +92,34 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.go.formatter.settings.were.checked": "true",
-    "RunOnceActivity.go.migrated.go.modules.settings": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "go.import.settings.migrated": "true",
-    "jdk.selected.com.intellij.ui.dsl.builder.impl.RowImpl.sdk": "corretto-17",
-    "last_directory_selection": "A:/GitHub/TheCore/core/src/main/java/org/leux/thecore/listeners",
-    "last_opened_file_path": "A:/GitHub/TheCore/core/src/main/resources",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Libraries",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.39195403",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
+    &quot;jdk.selected.com.intellij.ui.dsl.builder.impl.RowImpl.sdk&quot;: &quot;corretto-17&quot;,
+    &quot;last_directory_selection&quot;: &quot;A:/GitHub/TheCore/core/src/main/java/org/leux/thecore/listeners&quot;,
+    &quot;last_opened_file_path&quot;: &quot;A:/GitHub/TheCore/core/src/main/resources&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.39195403&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "jdk.preference.com.intellij.ui.dsl.builder.impl.RowImpl.sdk": [
-      "17=C:\\Users\\Marti\\.jdks\\corretto-17.0.6"
+  &quot;keyToStringList&quot;: {
+    &quot;jdk.preference.com.intellij.ui.dsl.builder.impl.RowImpl.sdk&quot;: [
+      &quot;17=C:\\Users\\Marti\\.jdks\\corretto-17.0.6&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="A:\GitHub\TheCore\core\src\main\resources" />
@@ -163,19 +129,47 @@
       <recent name="C:\Users\Marti\IdeaProjects\TheCore" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Marti\IdeaProjects\TheCore\core\src\main\resources" />
       <recent name="A:\GitHub\TheCore\gui\src\main\java\dev\triumphteam\gui" />
       <recent name="A:\GitHub\TheCore\gui" />
       <recent name="A:\GitHub\TheCore\core\src" />
       <recent name="A:\GitHub\TheCore\core" />
-      <recent name="A:\GitHub\TheCore" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.leux.thecore.listener.custom" />
       <recent name="org.leux.Event" />
       <recent name="org.leux.theapi" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="TheCore [package]" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="package" />
+              </list>
+            </option>
+            <option name="pomFileName" value="pom.xml" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -191,6 +185,15 @@
       <workItem from="1678451745893" duration="1417000" />
       <workItem from="1678454418726" duration="1156000" />
       <workItem from="1678456459007" duration="17887000" />
+      <workItem from="1678551037431" duration="468000" />
+      <workItem from="1678553443189" duration="8000" />
+      <workItem from="1678568567028" duration="17534000" />
+      <workItem from="1678620618313" duration="7432000" />
+      <workItem from="1678647067382" duration="3000" />
+      <workItem from="1678647125239" duration="198000" />
+      <workItem from="1678647340268" duration="81000" />
+      <workItem from="1678647437620" duration="316000" />
+      <workItem from="1678647773919" duration="275000" />
     </task>
     <servers />
   </component>
