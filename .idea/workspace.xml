@@ -74,6 +74,9 @@
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
+    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
+      "GitIgnore"
+    ],
     "jdk.preference.com.intellij.ui.dsl.builder.impl.RowImpl.sdk": [
       "17=C:\\Users\\Marti\\.jdks\\corretto-17.0.6"
     ]
@@ -81,11 +84,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Marti\IdeaProjects\TheCore\core\src\main\java\org\leux\theapi\command" />
       <recent name="A:\GitHub\TheCore\core\src\main\resources" />
       <recent name="A:\GitHub\TheCore\core\src\main\java\org\leux\theapi" />
       <recent name="A:\GitHub\TheCore" />
       <recent name="A:\GitHub\TheCore\core\src\main\java\org\leux\thecore" />
-      <recent name="C:\Users\Marti\IdeaProjects\TheCore" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Marti\IdeaProjects\TheCore\core\src\main\resources" />
@@ -152,7 +155,7 @@
       <workItem from="1678647125239" duration="198000" />
       <workItem from="1678647340268" duration="81000" />
       <workItem from="1678647437620" duration="316000" />
-      <workItem from="1678647773919" duration="2781000" />
+      <workItem from="1678647773919" duration="2925000" />
     </task>
     <servers />
   </component>
