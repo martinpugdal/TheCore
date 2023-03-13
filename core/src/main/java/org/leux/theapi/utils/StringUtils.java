@@ -4,6 +4,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class StringUtils {
+
+    private StringUtils() {
+        throw new IllegalStateException("Utility class, cannot be instantiated");
+    }
     public static String formatList(List<String> strings, String placeholder){
         if(strings.isEmpty()) return placeholder;
         StringBuilder sb = new StringBuilder();

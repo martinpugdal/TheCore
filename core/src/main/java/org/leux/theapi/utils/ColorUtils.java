@@ -6,6 +6,10 @@ import java.util.List;
 
 public class ColorUtils {
 
+    private ColorUtils() {
+        throw new IllegalStateException("Utility class, cannot be instantiated");
+    }
+
     public static String[] getColored(String... stringList){
         if(stringList == null) return null;
         for(int i = 0; i< stringList.length;i++)

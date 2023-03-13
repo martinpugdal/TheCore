@@ -9,6 +9,10 @@ import java.io.OutputStream;
 import java.nio.file.Files;
 
 public class FileUtils {
+
+    private FileUtils() {
+        throw new IllegalStateException("Utility class, cannot be instantiated");
+    }
     public static boolean isYamlFile(String paramString){
         return StringUtils.endsWith(paramString, "yml", "yaml");
     }
