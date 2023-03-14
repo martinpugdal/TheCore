@@ -1,4 +1,4 @@
-package org.leux.thecore.listener.plugin;
+package org.leux.thecore.listeners.plugin;
 
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;

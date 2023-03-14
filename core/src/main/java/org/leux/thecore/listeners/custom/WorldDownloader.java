@@ -1,11 +1,10 @@
-package org.leux.thecore.listener.custom;
+package org.leux.thecore.listeners.custom;
 
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.leux.TheCore;
-import org.leux.thecore.events.SkullGriefingEvent;
 import org.leux.thecore.events.WorldDownloaderEvent;
 
 import static org.leux.theapi.actionbar.ActionBarAPI.sendActionBar;

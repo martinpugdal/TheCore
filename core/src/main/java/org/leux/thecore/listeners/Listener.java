@@ -1,8 +1,8 @@
-package org.leux.thecore.listener;
+package org.leux.thecore.listeners;
 
-import org.leux.thecore.listener.custom.SkullGriefing;
-import org.leux.thecore.listener.plugin.PluginMessageRecieved;
-import org.leux.thecore.listener.spigot.player.PlayerInteract;
+import org.leux.thecore.listeners.custom.SkullGriefing;
+import org.leux.thecore.listeners.plugin.PluginMessageRecieved;
+import org.leux.thecore.listeners.spigot.player.PlayerInteract;
 
 public class Listener {
 

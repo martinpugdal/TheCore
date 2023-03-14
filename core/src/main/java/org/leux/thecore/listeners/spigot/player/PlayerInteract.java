@@ -1,4 +1,4 @@
-package org.leux.thecore.listener.spigot.player;
+package org.leux.thecore.listeners.spigot.player;
 
 import org.bukkit.Bukkit;
 import org.bukkit.Material;

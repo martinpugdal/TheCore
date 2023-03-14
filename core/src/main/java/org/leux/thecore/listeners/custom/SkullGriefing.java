@@ -1,4 +1,4 @@
-package org.leux.thecore.listener.custom;
+package org.leux.thecore.listeners.custom;
 
 import org.bukkit.Bukkit;
 import org.bukkit.event.EventHandler;
