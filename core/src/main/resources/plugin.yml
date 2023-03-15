@@ -2,3 +2,10 @@ name: TheCore
 version: '${project.version}'
 main: org.leux.TheCore
 api-version: 1.19
+commands:
+  thecore:
+    description: A simple description.
+  discord:
+    description: Discord link
+  bc:
+    description: broadcast

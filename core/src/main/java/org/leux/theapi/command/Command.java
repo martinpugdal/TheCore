@@ -10,7 +10,7 @@ import java.util.Arrays;
 public class Command {
 
     private final JavaPlugin plugin;
-    private ArrayList<SubCommand> subCommands;
+    private final ArrayList<SubCommand> subCommands = new ArrayList<>();
 
     public Command(JavaPlugin plugin) {
         this.plugin = plugin;
@@ -51,18 +51,18 @@ public class Command {
         return null;
     }
 
-    protected CommandResult.ResultType execute(CommandSender sender, String[] args) {
+    protected CommandResult execute(CommandSender sender, String[] args) {
         if (args.length == 0) {
-            return CommandResult.ResultType.NO_SUB_COMMAND_FOUND;
+            return new CommandResult(null, Result.NO_SUB_COMMAND_FOUND);
         }
 
         SubCommand subCommand = getSubCommandFromAlias(args[0]);
         if (subCommand == null) {
-            return CommandResult.ResultType.NO_SUB_COMMAND_FOUND;
+            return new CommandResult(subCommand, Result.NO_SUB_COMMAND_FOUND);
         }
 
         if (!this.hasPermission(sender, subCommand.getPermissions())) {
-            return CommandResult.ResultType.NO_PERMISSION;
+            return new CommandResult(subCommand, Result.NO_PERMISSION);
         }
 
         String[] newArgs = Arrays.copyOfRange(args, 1, args.length);

@@ -1,8 +1,9 @@
 package org.leux.theapi.command;
 
+import org.bukkit.command.CommandSender;
 import org.bukkit.plugin.java.JavaPlugin;
 
-public class SubCommand extends Command {
+public abstract class SubCommand extends Command {
 
     private final String description;
     private final String usage;
@@ -11,9 +12,19 @@ public class SubCommand extends Command {
 
     public SubCommand(JavaPlugin plugin, String description, String usage, String permission, String... aliases) {
         super(plugin);
+
         this.description = description;
         this.usage = usage;
         this.permissions = new String[] { permission };
+        this.aliases = aliases;
+    }
+
+    public SubCommand(JavaPlugin plugin, String description, String usage, String[] permissions, String... aliases) {
+        super(plugin);
+
+        this.description = description;
+        this.usage = usage;
+        this.permissions = permissions;
         this.aliases = aliases;
     }
 
@@ -25,6 +36,9 @@ public class SubCommand extends Command {
         }
         return false;
     }
+
+    public abstract CommandResult execute(CommandSender sender, String[] args);
+
 
     public String[] getPermissions() {
         return this.permissions;

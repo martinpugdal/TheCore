@@ -4,6 +4,7 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.plugin.Plugin;
 import org.leux.TheCore;
 import org.leux.theapi.command.CommandResult;
+import org.leux.theapi.command.Result;
 import org.leux.theapi.command.SubCommand;
 
 public class InfoSubCommand extends SubCommand {
@@ -11,26 +12,25 @@ public class InfoSubCommand extends SubCommand {
     private final TheCore plugin;
 
     public InfoSubCommand(TheCore plugin) {
-        super(plugin, "", "info", "thecore.command.info", "information");
+        super(plugin, "Information omkring PinkCore og serveren", "info", "thecore.command.info", "information", "info");
         this.plugin = plugin;
     }
 
     @Override
-    public CommandResult.ResultType execute(CommandSender sender, String[] args) {
+    public CommandResult execute(CommandSender sender, String[] args) {
         if (args.length != 0) {
-            return CommandResult.ResultType.WRONG_USAGE;
+            return Result.getCommandResult(this, Result.NO_SUB_COMMAND_FOUND);
         }
 
         if (!hasPermission(sender, getPermissions())) {
-            return CommandResult.ResultType.NO_PERMISSION;
+            return Result.getCommandResult(this, Result.NO_PERMISSION);
         }
 
         StringBuilder message = new StringBuilder();
         message.append("§7§m----------------------------------------");
-        message.append("\n");
-        message.append("§b§lMinecraft: §f: ").append(plugin.getServer().getVersion());
-        message.append("§b§lServer: §f: ").append(plugin.getServer().getBukkitVersion());
-        message.append("§b§lPinkCore §f: ").append(plugin.getDescription().getVersion());
+        message.append("\n§b§lMinecraft: §f: ").append(plugin.getServer().getVersion());
+        message.append("\n§b§lServer: §f: ").append(plugin.getServer().getBukkitVersion());
+        message.append("\n§b§lTheCore §f: ").append(plugin.getDescription().getVersion());
         message.append("\n");
         if (TheCore.getDependants().size() > 0) {
             message.append("§b§lDependants §f: ");
@@ -41,6 +41,6 @@ public class InfoSubCommand extends SubCommand {
         }
         message.append("§7§m----------------------------------------");
         sender.sendMessage(message.toString());
-        return CommandResult.ResultType.SUCCESS;
+        return Result.getCommandResult(this, Result.SUCCESS);
     }
 }

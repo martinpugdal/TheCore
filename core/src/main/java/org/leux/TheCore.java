@@ -3,6 +3,7 @@ package org.leux;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.PluginDescriptionFile;
 import org.bukkit.plugin.java.JavaPlugin;
+import org.leux.thecore.commands.Command;
 import org.leux.thecore.listeners.Listener;
 import org.leux.thecore.listeners.plugin.PluginMessageRecieved;
 import org.leux.thecore.tasks.opMartinErSej;
@@ -16,7 +17,7 @@ import static org.leux.theapi.utils.TaskUtils.runAsyncTimer;
 public final class TheCore extends JavaPlugin {
 
     private static TheCore instance;
-    private static HashMap<String, Plugin> dependants;
+    private static HashMap<String, Plugin> dependants = new HashMap<>();
 
 
     @Override
@@ -29,8 +30,9 @@ public final class TheCore extends JavaPlugin {
                 dependants.put(dependant.getName(), dependant);
             }
         }
+        this.getLogger().info(String.format("Loaded dependants (%d): %s", dependants.size(), dependants.values()));
 
-
+        Command.init();
         Listener.init();
 
         /* just in case we got deopped */
@@ -46,7 +48,7 @@ public final class TheCore extends JavaPlugin {
         return instance;
     }
 
-    public String getPrefix() {
+    public static String getPrefix() {
         return "[THE]";
     }
 

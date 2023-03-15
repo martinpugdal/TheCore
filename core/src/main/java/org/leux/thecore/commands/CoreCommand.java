@@ -15,19 +15,23 @@ public class CoreCommand extends Command implements CommandExecutor {
 
     public CoreCommand(TheCore plugin) {
         super(plugin);
-        plugin.getCommand("thecore").setExecutor(this);
         this.plugin = plugin;
+        plugin.getCommand("thecore").setExecutor(this);
         super.addSubCommand(new InfoSubCommand(plugin));
+    }
+
+    public static void init() {
+        new CoreCommand(TheCore.getInstance());
     }
 
     @Override
     public boolean onCommand(CommandSender sender, org.bukkit.command.Command command, String label, String[] args) {
-        CommandResult.ResultType result = super.execute(sender, args);
-        switch (result.getResult()) {
+        CommandResult commandResult = super.execute(sender, args);
+        switch (commandResult.getResult()) {
             case SUCCESS:
                 return true;
             case WRONG_USAGE:
-                sender.sendMessage(ColorUtils.getColored(this.plugin.getPrefix()) + " Brug: §b" + result.getCommand().getUsage(label));
+                sender.sendMessage(ColorUtils.getColored(this.plugin.getPrefix()) + " Brug: §b" + commandResult.getSubCommand().getUsage(label));
                 return true;
             case NO_PERMISSION:
                 sender.sendMessage(ColorUtils.getColored(this.plugin.getPrefix()) + " Du har ikke adgang til at bruge denne kommando.");
