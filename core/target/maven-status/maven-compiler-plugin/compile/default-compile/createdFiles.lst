@@ -12,6 +12,8 @@ org\leux\thecore\commands\Command.class
 org\leux\theapi\command\SubCommand.class
 org\leux\TheCore.class
 org\leux\thecore\commands\CoreCommand.class
+org\leux\thecore\managers\DatabaseManager.class
+org\leux\theapi\database\connectors\IConnector.class
 org\leux\theapi\command\CommandTabComplete.class
 org\leux\thecore\commands\subCore\InfoSubCommand.class
 org\leux\thecore\listeners\plugin\PluginMessageRecieved.class
@@ -26,4 +28,5 @@ org\leux\theapi\utils\FileUtils.class
 org\leux\thecore\commands\DiscordCommand.class
 org\leux\theapi\event\CallableEvent.class
 org\leux\thecore\commands\CoreCommand$1.class
+org\leux\theapi\database\connectors\IConnector$ConnectionCallback.class
 org\leux\theapi\utils\ColorUtils.class

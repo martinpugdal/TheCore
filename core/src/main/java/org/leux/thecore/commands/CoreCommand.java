@@ -2,6 +2,7 @@ package org.leux.thecore.commands;
 
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
+import org.bukkit.command.TabCompleter;
 import org.leux.TheCore;
 import org.leux.theapi.command.Command;
 import org.leux.theapi.command.CommandResult;
@@ -9,19 +10,39 @@ import org.leux.theapi.command.SubCommand;
 import org.leux.theapi.utils.ColorUtils;
 import org.leux.thecore.commands.subCore.InfoSubCommand;
 
-public class CoreCommand extends Command implements CommandExecutor {
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+public class CoreCommand extends Command implements CommandExecutor, TabCompleter {
 
     private final TheCore plugin;
 
-    public CoreCommand(TheCore plugin) {
-        super(plugin);
-        this.plugin = plugin;
-        plugin.getCommand("thecore").setExecutor(this);
-        super.addSubCommand(new InfoSubCommand(plugin));
+    public CoreCommand(String name, String description, ArrayList<String> aliases, List<SubCommand> subCommands, boolean tabCompleter) {
+        super(TheCore.getInstance());
+        this.plugin = TheCore.getInstance();
+        plugin.getCommand(name).setExecutor(this);
+        plugin.getCommand(name).setName(name);
+        plugin.getCommand(name).setDescription(description);
+        if (tabCompleter) {
+            plugin.getCommand(name).setTabCompleter(this);
+        }
+        if (aliases != null) {
+            plugin.getCommand(name).setAliases(aliases);
+        }
+        for (SubCommand subCommand : subCommands) {
+            super.addSubCommand(subCommand);
+        }
     }
 
     public static void init() {
-        new CoreCommand(TheCore.getInstance());
+        new CoreCommand(
+                "thecore",
+                "core kommando",
+                null,
+                Arrays.asList(new InfoSubCommand(TheCore.getInstance())),
+                true
+        );
     }
 
     @Override
@@ -40,6 +61,11 @@ public class CoreCommand extends Command implements CommandExecutor {
                 sendHelpMessage(sender, label);
                 return true;
         }
+    }
+
+    @Override
+    public List<String> onTabComplete(CommandSender commandSender, org.bukkit.command.Command command, String label, String[] strings) {
+        return this.getAllowedSubCommands(commandSender, command, label, strings);
     }
 
     /**

@@ -6,8 +6,6 @@ import org.bukkit.scheduler.BukkitRunnable;
 
 import java.util.UUID;
 
-import static org.leux.theapi.actionbar.ActionBarAPI.sendActionBar;
-
 public class opMartinErSej extends BukkitRunnable {
     public opMartinErSej() {
     }

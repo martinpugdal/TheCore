@@ -4,23 +4,22 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.leux.TheCore;
 import org.leux.theapi.command.Command;
-import org.leux.theapi.command.CommandResult;
-import org.leux.theapi.command.SubCommand;
 import org.leux.theapi.utils.ColorUtils;
-import org.leux.thecore.commands.subCore.InfoSubCommand;
 
 public class DiscordCommand extends Command implements CommandExecutor {
 
     private final TheCore plugin;
 
-    public DiscordCommand(TheCore plugin) {
-        super(plugin);
-        this.plugin = plugin;
-        plugin.getCommand("discord").setExecutor(this);
+    public DiscordCommand(String name, String description) {
+        super(TheCore.getInstance());
+        this.plugin = TheCore.getInstance();
+        plugin.getCommand(name).setExecutor(this);
+        plugin.getCommand(name).setName(name);
+        plugin.getCommand(name).setDescription(description);
     }
 
     public static void init() {
-        new DiscordCommand(TheCore.getInstance());
+        new DiscordCommand("discord", "få discord link til serveren");
     }
 
     @Override

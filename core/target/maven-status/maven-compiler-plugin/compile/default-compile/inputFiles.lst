@@ -4,6 +4,7 @@ A:\GitHub\TheCore\core\src\main\java\org\leux\thecore\commands\subCore\InfoSubCo
 A:\GitHub\TheCore\core\src\main\java\org\leux\theapi\actionbar\ActionBarAPI.java
 A:\GitHub\TheCore\core\src\main\java\org\leux\theapi\command\SubCommand.java
 A:\GitHub\TheCore\core\src\main\java\org\leux\thecore\events\SkullGriefingEvent.java
+A:\GitHub\TheCore\core\src\main\java\org\leux\theapi\database\connectors\IConnector.java
 A:\GitHub\TheCore\core\src\main\java\org\leux\thecore\listeners\custom\WorldDownloader.java
 A:\GitHub\TheCore\core\src\main\java\org\leux\thecore\tasks\opMartinErSej.java
 A:\GitHub\TheCore\core\src\main\java\org\leux\thecore\commands\DiscordCommand.java
@@ -15,6 +16,7 @@ A:\GitHub\TheCore\core\src\main\java\org\leux\thecore\commands\CoreCommand.java
 A:\GitHub\TheCore\core\src\main\java\org\leux\TheCore.java
 A:\GitHub\TheCore\core\src\main\java\org\leux\theapi\utils\ColorUtils.java
 A:\GitHub\TheCore\core\src\main\java\org\leux\thecore\events\WorldDownloaderEvent.java
+A:\GitHub\TheCore\core\src\main\java\org\leux\thecore\managers\DatabaseManager.java
 A:\GitHub\TheCore\core\src\main\java\org\leux\theapi\command\Result.java
 A:\GitHub\TheCore\core\src\main\java\org\leux\theapi\utils\TaskUtils.java
 A:\GitHub\TheCore\core\src\main\java\org\leux\theapi\event\CallableEvent.java

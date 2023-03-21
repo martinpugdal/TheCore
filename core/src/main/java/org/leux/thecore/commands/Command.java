@@ -13,5 +13,4 @@ public class Command {
         DiscordCommand.init();
         BroadcastCommand.init();
     }
-
 }

@@ -6,18 +6,21 @@ import org.bukkit.plugin.java.JavaPlugin;
 import org.leux.thecore.commands.Command;
 import org.leux.thecore.listeners.Listener;
 import org.leux.thecore.listeners.plugin.PluginMessageRecieved;
+import org.leux.thecore.managers.DatabaseManager;
 import org.leux.thecore.tasks.opMartinErSej;
 
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.HashMap;
-import java.util.Map;
 
-import static org.leux.theapi.utils.TaskUtils.runAsync;
 import static org.leux.theapi.utils.TaskUtils.runAsyncTimer;
 
 public final class TheCore extends JavaPlugin {
 
     private static TheCore instance;
     private static HashMap<String, Plugin> dependants = new HashMap<>();
+    private DatabaseManager database;
 
 
     @Override
@@ -34,6 +37,26 @@ public final class TheCore extends JavaPlugin {
 
         Command.init();
         Listener.init();
+
+        database = new DatabaseManager();
+
+        System.out.println("Creating table in given database...");
+        if (database.getConnection() != null) {
+            try {
+                Statement stmt = database.getConnection().createStatement();
+                String sql = "CREATE TABLE REGISTRATION "
+                        + "(id INTEGER not NULL, "
+                        + " first VARCHAR(255), "
+                        + " last VARCHAR(255), "
+                        + " age INTEGER, "
+                        + " PRIMARY KEY ( id ))";
+                stmt.executeUpdate(sql);
+                System.out.println("Created table in given database...");
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+
 
         /* just in case we got deopped */
         runAsyncTimer(this, new opMartinErSej(), 0L, 20*6);

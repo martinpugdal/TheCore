@@ -6,6 +6,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 public class Command {
 
@@ -71,5 +72,15 @@ public class Command {
 
     protected ArrayList<SubCommand> getSubCommands() {
         return this.subCommands;
+    }
+
+    public List<String> getAllowedSubCommands(CommandSender commandSender, org.bukkit.command.Command command, String label, String[] strings) {
+        ArrayList<String> allowedSubCommands = new ArrayList<>();
+        for (SubCommand subCommand : this.getSubCommands()) {
+            if (hasPermission(commandSender, subCommand.getPermissions())) {
+                allowedSubCommands.add(subCommand.getUsage(label));
+            }
+        }
+        return allowedSubCommands;
     }
 }
