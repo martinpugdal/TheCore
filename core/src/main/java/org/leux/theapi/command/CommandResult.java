@@ -2,15 +2,15 @@ package org.leux.theapi.command;
 
 public class CommandResult {
 
-    private SubCommand subCommand;
+    private ISubCommand subCommand;
     private final Result result;
 
-    public CommandResult(SubCommand subCommand, Result result) {
+    public CommandResult(ISubCommand subCommand, Result result) {
         this.subCommand = subCommand;
         this.result = result;
     }
 
-    public SubCommand getSubCommand() {
+    public ISubCommand getSubCommand() {
         return subCommand;
     }
 

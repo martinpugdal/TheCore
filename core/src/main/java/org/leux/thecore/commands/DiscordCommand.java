@@ -3,10 +3,10 @@ package org.leux.thecore.commands;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.leux.TheCore;
-import org.leux.theapi.command.Command;
+import org.leux.theapi.command.ICommand;
 import org.leux.theapi.utils.ColorUtils;
 
-public class DiscordCommand extends Command implements CommandExecutor {
+public class DiscordCommand extends ICommand implements CommandExecutor {
 
     private final TheCore plugin;
 

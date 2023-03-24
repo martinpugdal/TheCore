@@ -5,9 +5,9 @@ import org.bukkit.plugin.Plugin;
 import org.leux.TheCore;
 import org.leux.theapi.command.CommandResult;
 import org.leux.theapi.command.Result;
-import org.leux.theapi.command.SubCommand;
+import org.leux.theapi.command.ISubCommand;
 
-public class InfoSubCommand extends SubCommand {
+public class InfoSubCommand extends ISubCommand {
 
     private final TheCore plugin;
 

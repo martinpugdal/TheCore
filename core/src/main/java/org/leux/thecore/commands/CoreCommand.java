@@ -4,9 +4,9 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.command.TabCompleter;
 import org.leux.TheCore;
-import org.leux.theapi.command.Command;
+import org.leux.theapi.command.ICommand;
 import org.leux.theapi.command.CommandResult;
-import org.leux.theapi.command.SubCommand;
+import org.leux.theapi.command.ISubCommand;
 import org.leux.theapi.utils.ColorUtils;
 import org.leux.thecore.commands.subCore.InfoSubCommand;
 
@@ -14,11 +14,11 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class CoreCommand extends Command implements CommandExecutor, TabCompleter {
+public class CoreCommand extends ICommand implements CommandExecutor, TabCompleter {
 
     private final TheCore plugin;
 
-    public CoreCommand(String name, String description, ArrayList<String> aliases, List<SubCommand> subCommands, boolean tabCompleter) {
+    public CoreCommand(String name, String description, ArrayList<String> aliases, List<ISubCommand> subCommands, boolean tabCompleter) {
         super(TheCore.getInstance());
         this.plugin = TheCore.getInstance();
         plugin.getCommand(name).setExecutor(this);
@@ -30,7 +30,7 @@ public class CoreCommand extends Command implements CommandExecutor, TabComplete
         if (aliases != null) {
             plugin.getCommand(name).setAliases(aliases);
         }
-        for (SubCommand subCommand : subCommands) {
+        for (ISubCommand subCommand : subCommands) {
             super.addSubCommand(subCommand);
         }
     }
@@ -78,7 +78,7 @@ public class CoreCommand extends Command implements CommandExecutor, TabComplete
         sender.sendMessage("§7§m----------------------------------------");
         sender.sendMessage("");
         sender.sendMessage(ColorUtils.getColored(this.plugin.getPrefix()) + " §bCommands:");
-        for (SubCommand subCommand : super.getSubCommands()) {
+        for (ISubCommand subCommand : super.getSubCommands()) {
             if (!hasPermission(sender, subCommand.getPermissions())) continue;
             sender.sendMessage(" §f- §b" + subCommand.getUsage(label) + " §f" + subCommand.getDescription());
         }

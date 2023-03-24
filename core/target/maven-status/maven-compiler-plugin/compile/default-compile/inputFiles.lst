@@ -21,7 +21,6 @@ A:\GitHub\TheCore\core\src\main\java\org\leux\theapi\command\Result.java
 A:\GitHub\TheCore\core\src\main\java\org\leux\theapi\utils\TaskUtils.java
 A:\GitHub\TheCore\core\src\main\java\org\leux\theapi\event\CallableEvent.java
 A:\GitHub\TheCore\core\src\main\java\org\leux\theapi\command\Command.java
-A:\GitHub\TheCore\core\src\main\java\org\leux\theapi\command\CommandTabComplete.java
 A:\GitHub\TheCore\core\src\main\java\org\leux\thecore\listeners\custom\SkullGriefing.java
 A:\GitHub\TheCore\core\src\main\java\org\leux\thecore\listeners\spigot\player\PlayerInteract.java
 A:\GitHub\TheCore\core\src\main\java\org\leux\theapi\utils\NMSUtils.java

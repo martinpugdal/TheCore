@@ -14,7 +14,6 @@ org\leux\TheCore.class
 org\leux\thecore\commands\CoreCommand.class
 org\leux\thecore\managers\DatabaseManager.class
 org\leux\theapi\database\connectors\IConnector.class
-org\leux\theapi\command\CommandTabComplete.class
 org\leux\thecore\commands\subCore\InfoSubCommand.class
 org\leux\thecore\listeners\plugin\PluginMessageRecieved.class
 org\leux\thecore\listeners\Listener.class

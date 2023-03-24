@@ -3,16 +3,14 @@ package org.leux.thecore.commands;
 import org.bukkit.Bukkit;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
-import org.bukkit.event.EventHandler;
-import org.bukkit.event.EventPriority;
 import org.leux.TheCore;
-import org.leux.theapi.command.Command;
+import org.leux.theapi.command.ICommand;
 import org.leux.theapi.utils.ColorUtils;
 
 import java.util.Arrays;
 
 
-public class BroadcastCommand extends Command implements CommandExecutor {
+public class BroadcastCommand extends ICommand implements CommandExecutor {
 
     private final TheCore plugin;
 

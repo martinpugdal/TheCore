@@ -5,29 +5,79 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dde8955a-785f-4236-95b2-4bfbbb7f51b1" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/ItemFlip_2_1_1.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/core.iml" beforeDir="false" afterPath="$PROJECT_DIR$/core/core.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/core/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/src/main/java/org/leux/TheCore.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/org/leux/TheCore.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/java/org/leux/theapi/command/Command.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/org/leux/theapi/command/Command.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/java/org/leux/theapi/command/CommandTabComplete.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/java/org/leux/thecore/commands/Command.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/org/leux/thecore/commands/Command.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/org/leux/theapi/command/Command.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/org/leux/theapi/command/ICommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/org/leux/theapi/command/CommandResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/org/leux/theapi/command/CommandResult.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/org/leux/theapi/command/Result.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/org/leux/theapi/command/Result.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/org/leux/theapi/command/SubCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/org/leux/theapi/command/ISubCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/org/leux/theapi/database/connectors/IConnector.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/org/leux/theapi/database/connectors/IConnector.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/org/leux/thecore/commands/BroadcastCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/org/leux/thecore/commands/BroadcastCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/src/main/java/org/leux/thecore/commands/CoreCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/org/leux/thecore/commands/CoreCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/src/main/java/org/leux/thecore/commands/DiscordCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/org/leux/thecore/commands/DiscordCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/java/org/leux/thecore/tasks/opMartinErSej.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/org/leux/thecore/tasks/opMartinErSej.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/org/leux/thecore/commands/subCore/InfoSubCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/org/leux/thecore/commands/subCore/InfoSubCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/org/leux/thecore/managers/DatabaseManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/org/leux/thecore/managers/DatabaseManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/target/classes/org/leux/TheCore.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/target/classes/org/leux/TheCore.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/target/classes/org/leux/theapi/command/Command.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/target/classes/org/leux/theapi/command/Command.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/target/classes/org/leux/theapi/command/CommandTabComplete.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/target/classes/org/leux/theapi/command/CommandTabComplete.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/target/classes/org/leux/thecore/commands/CoreCommand$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/target/classes/org/leux/thecore/commands/CoreCommand$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/target/classes/org/leux/thecore/commands/CoreCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/target/classes/org/leux/thecore/commands/CoreCommand.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/target/classes/org/leux/theapi/command/Command.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/target/classes/org/leux/theapi/command/CommandResult.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/target/classes/org/leux/theapi/command/CommandResult.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/target/classes/org/leux/theapi/command/CommandTabComplete.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/target/classes/org/leux/theapi/command/Result.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/target/classes/org/leux/theapi/command/Result.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/target/classes/org/leux/theapi/command/SubCommand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/target/classes/org/leux/theapi/database/connectors/IConnector.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/target/classes/org/leux/theapi/database/connectors/IConnector.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/target/classes/org/leux/thecore/commands/BroadcastCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/target/classes/org/leux/thecore/commands/BroadcastCommand.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/target/classes/org/leux/thecore/commands/Command.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/target/classes/org/leux/thecore/commands/CoreCommand$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/target/classes/org/leux/thecore/commands/CoreCommand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/target/classes/org/leux/thecore/commands/DiscordCommand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/target/classes/org/leux/thecore/commands/subCore/InfoSubCommand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/target/classes/org/leux/thecore/events/SkullGriefingEvent.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/target/classes/org/leux/thecore/events/WorldDownloaderEvent.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/target/classes/org/leux/thecore/listeners/Listener.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/target/classes/org/leux/thecore/listeners/custom/SkullGriefing.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/target/classes/org/leux/thecore/listeners/custom/WorldDownloader.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/target/classes/org/leux/thecore/listeners/plugin/PluginMessageRecieved.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/target/classes/org/leux/thecore/listeners/spigot/player/PlayerInteract.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/target/classes/org/leux/thecore/managers/DatabaseManager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/target/classes/org/leux/thecore/tasks/opMartinErSej.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/target/core-1.0-shaded.jar" beforeDir="false" afterPath="$PROJECT_DIR$/core/target/core-1.0-shaded.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/target/core-1.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/core/target/core-1.0.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/core/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/core/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/target/original-core-1.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/core/target/original-core-1.0.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/target/classes/dev/triumphteam/gui/builder/gui/BaseGuiBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/gui/target/classes/dev/triumphteam/gui/builder/gui/BaseGuiBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/target/classes/dev/triumphteam/gui/builder/gui/PaginatedBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/gui/target/classes/dev/triumphteam/gui/builder/gui/PaginatedBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/target/classes/dev/triumphteam/gui/builder/gui/ScrollingBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/gui/target/classes/dev/triumphteam/gui/builder/gui/ScrollingBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/target/classes/dev/triumphteam/gui/builder/gui/SimpleBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/gui/target/classes/dev/triumphteam/gui/builder/gui/SimpleBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/target/classes/dev/triumphteam/gui/builder/gui/StorageBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/gui/target/classes/dev/triumphteam/gui/builder/gui/StorageBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/target/classes/dev/triumphteam/gui/builder/item/BannerBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/gui/target/classes/dev/triumphteam/gui/builder/item/BannerBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/target/classes/dev/triumphteam/gui/builder/item/BaseItemBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/gui/target/classes/dev/triumphteam/gui/builder/item/BaseItemBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/target/classes/dev/triumphteam/gui/builder/item/BookBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/gui/target/classes/dev/triumphteam/gui/builder/item/BookBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/target/classes/dev/triumphteam/gui/builder/item/FireworkBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/gui/target/classes/dev/triumphteam/gui/builder/item/FireworkBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/target/classes/dev/triumphteam/gui/builder/item/ItemBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/gui/target/classes/dev/triumphteam/gui/builder/item/ItemBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/target/classes/dev/triumphteam/gui/builder/item/MapBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/gui/target/classes/dev/triumphteam/gui/builder/item/MapBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/target/classes/dev/triumphteam/gui/builder/item/SkullBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/gui/target/classes/dev/triumphteam/gui/builder/item/SkullBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/target/classes/dev/triumphteam/gui/components/GuiType.class" beforeDir="false" afterPath="$PROJECT_DIR$/gui/target/classes/dev/triumphteam/gui/components/GuiType.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/target/classes/dev/triumphteam/gui/components/nbt/LegacyNbt.class" beforeDir="false" afterPath="$PROJECT_DIR$/gui/target/classes/dev/triumphteam/gui/components/nbt/LegacyNbt.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/target/classes/dev/triumphteam/gui/components/nbt/Pdc.class" beforeDir="false" afterPath="$PROJECT_DIR$/gui/target/classes/dev/triumphteam/gui/components/nbt/Pdc.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/target/classes/dev/triumphteam/gui/components/util/GuiFiller.class" beforeDir="false" afterPath="$PROJECT_DIR$/gui/target/classes/dev/triumphteam/gui/components/util/GuiFiller.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/target/classes/dev/triumphteam/gui/components/util/ItemNbt.class" beforeDir="false" afterPath="$PROJECT_DIR$/gui/target/classes/dev/triumphteam/gui/components/util/ItemNbt.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/target/classes/dev/triumphteam/gui/components/util/SkullUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/gui/target/classes/dev/triumphteam/gui/components/util/SkullUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/target/classes/dev/triumphteam/gui/components/util/VersionHelper.class" beforeDir="false" afterPath="$PROJECT_DIR$/gui/target/classes/dev/triumphteam/gui/components/util/VersionHelper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/target/classes/dev/triumphteam/gui/guis/BaseGui.class" beforeDir="false" afterPath="$PROJECT_DIR$/gui/target/classes/dev/triumphteam/gui/guis/BaseGui.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/target/classes/dev/triumphteam/gui/guis/Gui.class" beforeDir="false" afterPath="$PROJECT_DIR$/gui/target/classes/dev/triumphteam/gui/guis/Gui.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/target/classes/dev/triumphteam/gui/guis/GuiItem.class" beforeDir="false" afterPath="$PROJECT_DIR$/gui/target/classes/dev/triumphteam/gui/guis/GuiItem.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/target/classes/dev/triumphteam/gui/guis/PaginatedGui.class" beforeDir="false" afterPath="$PROJECT_DIR$/gui/target/classes/dev/triumphteam/gui/guis/PaginatedGui.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/target/classes/dev/triumphteam/gui/guis/PersistentPaginatedGui$Page.class" beforeDir="false" afterPath="$PROJECT_DIR$/gui/target/classes/dev/triumphteam/gui/guis/PersistentPaginatedGui$Page.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/target/classes/dev/triumphteam/gui/guis/PersistentPaginatedGui.class" beforeDir="false" afterPath="$PROJECT_DIR$/gui/target/classes/dev/triumphteam/gui/guis/PersistentPaginatedGui.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/target/classes/dev/triumphteam/gui/guis/ScrollingGui.class" beforeDir="false" afterPath="$PROJECT_DIR$/gui/target/classes/dev/triumphteam/gui/guis/ScrollingGui.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/target/classes/dev/triumphteam/gui/guis/StorageGui.class" beforeDir="false" afterPath="$PROJECT_DIR$/gui/target/classes/dev/triumphteam/gui/guis/StorageGui.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui/target/gui-1.0-shaded.jar" beforeDir="false" afterPath="$PROJECT_DIR$/gui/target/gui-1.0-shaded.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gui/target/gui-1.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/gui/target/gui-1.0.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gui/target/original-gui-1.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/gui/target/original-gui-1.0.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packaging/packaging.iml" beforeDir="false" afterPath="$PROJECT_DIR$/packaging/packaging.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packaging/target/TheCore-1.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packaging/target/maven-archiver/pom.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packaging/target/original-TheCore-1.0.jar" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,13 +139,13 @@
     &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
     &quot;jdk.selected.com.intellij.ui.dsl.builder.impl.RowImpl.sdk&quot;: &quot;corretto-17&quot;,
     &quot;last_directory_selection&quot;: &quot;A:/GitHub/TheCore/core/src/main/java/org/leux/thecore/listeners&quot;,
-    &quot;last_opened_file_path&quot;: &quot;A:/GitHub/TheCore/core/src/main/java/org/leux/theapi/command_copy&quot;,
+    &quot;last_opened_file_path&quot;: &quot;A:/GitHub/TheCore/core/src/main/resources&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.39195403&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;discord-application&quot;,
@@ -117,10 +167,10 @@
       <recent name="org.leux.theapi.command" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="A:\GitHub\TheCore\core\src\main\resources" />
       <recent name="A:\GitHub\TheCore\core\src\main\java\org\leux\theapi\command_copy" />
       <recent name="A:\GitHub\TheCore\gui" />
       <recent name="C:\Users\Marti\IdeaProjects\TheCore\core\src\main\java\org\leux\theapi\command" />
-      <recent name="A:\GitHub\TheCore\core\src\main\resources" />
       <recent name="A:\GitHub\TheCore\core\src\main\java\org\leux\theapi" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -204,6 +254,12 @@
       <workItem from="1679242557548" duration="7539000" />
       <workItem from="1679261235576" duration="231000" />
       <workItem from="1679403858811" duration="1787000" />
+      <workItem from="1679427716237" duration="8199000" />
+      <workItem from="1679510985810" duration="1783000" />
+      <workItem from="1679519243054" duration="1288000" />
+      <workItem from="1679588420775" duration="462000" />
+      <workItem from="1679603005542" duration="6718000" />
+      <workItem from="1679665240548" duration="57000" />
     </task>
     <servers />
   </component>

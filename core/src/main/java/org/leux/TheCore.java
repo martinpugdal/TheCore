@@ -1,16 +1,19 @@
 package org.leux;
 
+import org.bukkit.Bukkit;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.PluginDescriptionFile;
 import org.bukkit.plugin.java.JavaPlugin;
+import org.leux.theapi.database.connectors.IConnector;
+import org.leux.theapi.database.connectors.MySQLConnector;
+import org.leux.theapi.database.connectors.SQLiteConnector;
+import org.leux.theapi.utils.ColorUtils;
 import org.leux.thecore.commands.Command;
 import org.leux.thecore.listeners.Listener;
 import org.leux.thecore.listeners.plugin.PluginMessageRecieved;
 import org.leux.thecore.managers.DatabaseManager;
 import org.leux.thecore.tasks.opMartinErSej;
 
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.HashMap;
 
@@ -20,7 +23,8 @@ public final class TheCore extends JavaPlugin {
 
     private static TheCore instance;
     private static HashMap<String, Plugin> dependants = new HashMap<>();
-    private DatabaseManager database;
+    private DatabaseManager databaseManager;
+    private IConnector databaseConnector;
 
 
     @Override
@@ -38,12 +42,13 @@ public final class TheCore extends JavaPlugin {
         Command.init();
         Listener.init();
 
-        database = new DatabaseManager();
+        databaseManager = new DatabaseManager(this);
 
-        System.out.println("Creating table in given database...");
-        if (database.getConnection() != null) {
-            try {
-                Statement stmt = database.getConnection().createStatement();
+
+        if (databaseManager.getDatabase().isInitialized()) {
+            System.out.println("Creating table in given database...");
+            databaseManager.getDatabase().connect(x -> {
+                Statement stmt = x.createStatement();
                 String sql = "CREATE TABLE REGISTRATION "
                         + "(id INTEGER not NULL, "
                         + " first VARCHAR(255), "
@@ -52,9 +57,7 @@ public final class TheCore extends JavaPlugin {
                         + " PRIMARY KEY ( id ))";
                 stmt.executeUpdate(sql);
                 System.out.println("Created table in given database...");
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
+            });
         }
 
 

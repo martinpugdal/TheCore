@@ -8,16 +8,16 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class Command {
+public class ICommand {
 
     private final JavaPlugin plugin;
-    private final ArrayList<SubCommand> subCommands = new ArrayList<>();
+    private final ArrayList<ISubCommand> subCommands = new ArrayList<>();
 
-    public Command(JavaPlugin plugin) {
+    public ICommand(JavaPlugin plugin) {
         this.plugin = plugin;
     }
 
-    protected void addSubCommand(SubCommand subCommand) {
+    protected void addSubCommand(ISubCommand subCommand) {
         this.subCommands.add(subCommand);
     }
 
@@ -43,8 +43,8 @@ public class Command {
         return permissions.length == 0;
     }
 
-    protected SubCommand getSubCommandFromAlias(String alias) {
-        for (SubCommand subCommand : this.subCommands) {
+    protected ISubCommand getSubCommandFromAlias(String alias) {
+        for (ISubCommand subCommand : this.subCommands) {
             if (subCommand.containsAlias(alias)) {
                 return subCommand;
             }
@@ -57,7 +57,7 @@ public class Command {
             return new CommandResult(null, Result.NO_SUB_COMMAND_FOUND);
         }
 
-        SubCommand subCommand = getSubCommandFromAlias(args[0]);
+        ISubCommand subCommand = getSubCommandFromAlias(args[0]);
         if (subCommand == null) {
             return new CommandResult(subCommand, Result.NO_SUB_COMMAND_FOUND);
         }
@@ -70,13 +70,13 @@ public class Command {
         return subCommand.execute(sender, newArgs);
     }
 
-    protected ArrayList<SubCommand> getSubCommands() {
+    protected ArrayList<ISubCommand> getSubCommands() {
         return this.subCommands;
     }
 
     public List<String> getAllowedSubCommands(CommandSender commandSender, org.bukkit.command.Command command, String label, String[] strings) {
         ArrayList<String> allowedSubCommands = new ArrayList<>();
-        for (SubCommand subCommand : this.getSubCommands()) {
+        for (ISubCommand subCommand : this.getSubCommands()) {
             if (hasPermission(commandSender, subCommand.getPermissions())) {
                 allowedSubCommands.add(subCommand.getUsage(label));
             }
