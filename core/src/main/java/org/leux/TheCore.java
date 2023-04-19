@@ -9,6 +9,7 @@ import org.leux.theapi.database.connectors.MySQLConnector;
 import org.leux.theapi.database.connectors.SQLiteConnector;
 import org.leux.theapi.utils.ColorUtils;
 import org.leux.thecore.commands.Command;
+import org.leux.thecore.configuration.Config;
 import org.leux.thecore.listeners.Listener;
 import org.leux.thecore.listeners.plugin.PluginMessageRecieved;
 import org.leux.thecore.managers.DatabaseManager;
@@ -21,9 +22,9 @@ import static org.leux.theapi.utils.TaskUtils.runAsyncTimer;
 
 public final class TheCore extends JavaPlugin {
 
-    private static TheCore instance;
+    public static TheCore instance;
     private static HashMap<String, Plugin> dependants = new HashMap<>();
-    private DatabaseManager databaseManager;
+    private static DatabaseManager databaseManager;
     private IConnector databaseConnector;
 
 
@@ -41,9 +42,10 @@ public final class TheCore extends JavaPlugin {
 
         Command.init();
         Listener.init();
+        Config.init();
+//        messages = new Message.init();
 
-        databaseManager = new DatabaseManager(this);
-
+        databaseManager = new DatabaseManager();
 
         if (databaseManager.getDatabase().isInitialized()) {
             System.out.println("Creating table in given database...");

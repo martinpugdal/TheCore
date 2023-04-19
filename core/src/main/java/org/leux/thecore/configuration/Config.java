@@ -1,4 +1,4 @@
-package org.leux.theapi.configuration;
+package org.leux.thecore.configuration;
 
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.leux.TheCore;
@@ -9,13 +9,22 @@ import java.io.File;
 import java.io.IOException;
 import java.util.List;
 
-public class Config {
+public enum Config {
+    MYSQL_ENABLED("mysql.enabled", Boolean.valueOf(false), DataType.BOOLEAN),
+    MYSQL_HOSTNAME("mysql.hostname", "localhost", DataType.STRING),
+    MYSQL_PORT("mysql.port", Integer.valueOf(3306), DataType.INTEGER),
+    MYSQL_DATABASE("mysql.database", "database", DataType.STRING),
+    MYSQL_USERNAME("mysql.username", "username", DataType.STRING),
+    MYSQL_PASSWORD("mysql.password", "password", DataType.STRING),
+    MYSQL_USE_SSL("mysql.use_ssl", Boolean.valueOf(false), DataType.BOOLEAN);
 
     private final String path;
+
     private Object object;
+
     private final DataType dataType;
 
-    private Config(String path, Object object, DataType dataType) {
+    Config(String path, Object object, DataType dataType) {
         this.path = path;
         this.object = object;
         this.dataType = dataType;
@@ -31,83 +40,82 @@ public class Config {
 
     public static void init() {
         File file = new File(TheCore.getInstance().getDataFolder(), "config.yml");
-//        Config instance = values()[0];
-//
-//        try {
-//            instance.load(file);
-//        } catch (Exception var3) {
-//            var3.printStackTrace();
-//        }
+        Config instance = values()[0];
+        try {
+            instance.load(file);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     public void load(File file) throws IOException {
-        Config[] values = new Config[]{new Config("e", "e", DataType.BOOLEAN)};
         YamlConfiguration config;
+        Config[] values = values();
         if (file.exists()) {
             config = YamlConfiguration.loadConfiguration(file);
         } else {
             config = new YamlConfiguration();
         }
-
         try {
-            Config[] configs = values;
-            int configLength = values.length;
-            for(int j = 0; j < configLength; ++j) {
-                Config value = configs[j];
+            for (Config value : values) {
+                String string;
+                String bool;
+                String i;
+                String d;
+                List<String> stringList;
                 switch (value.getDataType()) {
                     case STRING:
-                        String string = config.getString(value.path);
+                        string = config.getString(value.path);
                         if (string == null) {
                             value.saveValue(value, config);
-                        } else {
-                            value.setObject(ColorUtils.getColored(string));
+                            break;
                         }
+                        value.setObject(ColorUtils.getColored(string));
                         break;
                     case BOOLEAN:
-                        String bool = config.getString(value.path);
+                        bool = config.getString(value.path);
                         if (bool == null) {
                             value.saveValue(value, config);
-                        } else {
-                            value.setObject(Boolean.valueOf(bool));
+                            break;
                         }
+                        value.setObject(Boolean.valueOf(bool));
                         break;
                     case INTEGER:
-                        String i = config.getString(value.path);
+                        i = config.getString(value.path);
                         if (i == null) {
                             value.saveValue(value, config);
-                        } else {
-                            value.setObject(Integer.valueOf(i));
+                            break;
                         }
+                        value.setObject(Integer.valueOf(i));
                         break;
                     case DOUBLE:
-                        String d = config.getString(value.path);
+                        d = config.getString(value.path);
                         if (d == null) {
                             value.saveValue(value, config);
-                        } else {
-                            value.setObject(Double.valueOf(d));
+                            break;
                         }
+                        value.setObject(Double.valueOf(d));
                         break;
                     case STRING_LIST:
-                        List<String> stringList = config.getStringList(value.path);
+                        stringList = config.getStringList(value.path);
                         if (stringList.isEmpty() && config.getString(value.path) == null) {
                             value.saveValue(value, config);
                             stringList = config.getStringList(value.path);
                         }
-
                         value.setObject(ColorUtils.getColored(stringList));
+                        break;
                 }
             }
-        } catch (Exception var13) {
-            var13.printStackTrace();
+        } catch (Exception e) {
+            e.printStackTrace();
         }
-
         config.save(file);
     }
 
     public void saveValue(Config value, YamlConfiguration config) {
-        if (!value.path.startsWith("_")) {
-            config.set(value.path, value.object);
-        }
+        if (value.path.startsWith("_"))
+            return;
+        config.set(value.path, value.object);
     }
 
     public String getString() {
@@ -115,26 +123,26 @@ public class Config {
     }
 
     public boolean getBoolean() {
-        return (Boolean)this.object;
+        return ((Boolean)this.object).booleanValue();
     }
 
     public int getInteger() {
-        return (Integer)this.object;
+        return ((Integer)this.object).intValue();
     }
 
     public double getDouble() {
-        return (Double)this.object;
+        return ((Double)this.object).doubleValue();
     }
 
     public float getFloat() {
-        return (Float)this.object;
+        return ((Float)this.object).floatValue();
     }
 
     public long getLong() {
-        return (Long)this.object;
+        return ((Long)this.object).longValue();
     }
 
     public List<String> getStringList() {
-        return (List)this.object;
+        return (List<String>)this.object;
     }
 }

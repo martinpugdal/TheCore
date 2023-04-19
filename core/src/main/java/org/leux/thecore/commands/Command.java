@@ -9,8 +9,9 @@ public class Command {
 
     public static void init() {
         TheCore.getInstance().getLogger().info("Loading commands...");
+        BroadcastCommand.init();
         CoreCommand.init();
         DiscordCommand.init();
-        BroadcastCommand.init();
+        SpawnCommand.init();
     }
 }

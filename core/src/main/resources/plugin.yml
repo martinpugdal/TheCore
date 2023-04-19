@@ -9,3 +9,8 @@ commands:
     description: Discord link
   bc:
     description: broadcast
+  setspawn:
+      description: set spawn
+  spawn:
+      description: teleport you to the spawn
+database: false

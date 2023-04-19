@@ -5,24 +5,40 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.leux.TheCore;
 import org.leux.theapi.command.ICommand;
+import org.leux.theapi.command.ISubCommand;
 import org.leux.theapi.utils.ColorUtils;
+import org.leux.thecore.commands.subCore.InfoSubCommand;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 
 public class BroadcastCommand extends ICommand implements CommandExecutor {
 
     private final TheCore plugin;
 
-    public BroadcastCommand(TheCore plugin) {
-        super(plugin);
-        plugin.getCommand("bc").setExecutor(this);
-        plugin.getCommand("bc").setAliases(Arrays.asList("broadcast"));
-        this.plugin = plugin;
+    public BroadcastCommand(String name, String description, ArrayList<String> aliases, List<ISubCommand> subCommands) {
+        super(TheCore.getInstance());
+        this.plugin = TheCore.getInstance();
+        plugin.getCommand(name).setExecutor(this);
+        plugin.getCommand(name).setName(name);
+        plugin.getCommand(name).setDescription(description);
+        if (aliases != null) {
+            plugin.getCommand(name).setAliases(aliases);
+        }
+        for (ISubCommand subCommand : subCommands) {
+            super.addSubCommand(subCommand);
+        }
     }
 
     public static void init() {
-        new BroadcastCommand(TheCore.getInstance());
+        new BroadcastCommand(
+                "bc",
+                "broadcast kommando",
+                new ArrayList<>(Arrays.asList("broadcast")),
+                null
+        );
     }
 
     @Override
