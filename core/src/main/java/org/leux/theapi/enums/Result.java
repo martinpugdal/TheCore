@@ -1,4 +1,7 @@
-package org.leux.theapi.command;
+package org.leux.theapi.enums;
+
+import org.leux.theapi.command.CommandResult;
+import org.leux.theapi.command.ISubCommand;
 
 public enum Result {
     NO_PERMISSION,

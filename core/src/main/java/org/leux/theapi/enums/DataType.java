@@ -9,6 +9,5 @@ public enum DataType {
     LONG,
     STRING_LIST;
 
-    private DataType() {
-    }
+    private DataType() {}
 }

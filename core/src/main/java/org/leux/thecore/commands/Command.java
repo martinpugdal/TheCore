@@ -12,6 +12,7 @@ public class Command {
         BroadcastCommand.init();
         CoreCommand.init();
         DiscordCommand.init();
+        SetSpawnCommand.init();
         SpawnCommand.init();
     }
 }

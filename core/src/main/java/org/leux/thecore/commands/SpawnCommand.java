@@ -8,7 +8,6 @@ import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.leux.TheCore;
-import org.leux.theapi.command.CommandResult;
 import org.leux.theapi.command.ICommand;
 import org.leux.theapi.command.ISubCommand;
 import org.leux.theapi.utils.ColorUtils;
@@ -16,17 +15,21 @@ import org.leux.theapi.utils.TaskUtils;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.*;
-import java.util.stream.Collectors;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.List;
+
+import static org.leux.thecore.configuration.Config.SPAWN_COOLDOWN;
 
 public class SpawnCommand extends ICommand implements CommandExecutor, TabCompleter {
 
     private static HashMap<String, Location> spawnLocations;
-    private File file;
-    private final TheCore plugin;
-    private YamlConfiguration config;
+    private static File file;
+    private final JavaPlugin plugin;
+    private static YamlConfiguration config;
 
-    public SpawnCommand(String name, String description, List<String> aliases, ArrayList<ISubCommand> subCommands, boolean tabCompleter) {
+    public SpawnCommand(String name, String description, List<String> aliases, boolean tabCompleter) {
         super(TheCore.getInstance());
         this.plugin = TheCore.getInstance();
         this.file = new File(plugin.getDataFolder(), "spawns.yml");
@@ -40,9 +43,6 @@ public class SpawnCommand extends ICommand implements CommandExecutor, TabComple
         if (aliases != null) {
             plugin.getCommand(name).setAliases(aliases);
         }
-        for (ISubCommand subCommand : subCommands) {
-            super.addSubCommand(subCommand);
-        }
         loadSpawnLocations();
     }
 
@@ -51,7 +51,6 @@ public class SpawnCommand extends ICommand implements CommandExecutor, TabComple
                 "spawn",
                 "spawn kommando",
                 Collections.singletonList("corespawn"),
-                null,
                 true
         );
     }
@@ -60,18 +59,38 @@ public class SpawnCommand extends ICommand implements CommandExecutor, TabComple
     public boolean onCommand(CommandSender sender, org.bukkit.command.Command command, String label, String[] args) {
         if (sender instanceof Player) {
             Player player = (Player) sender;
-            String spawnName = args[0].length() == 0 ? "default" : args[0];
+            // TODO: udskift denne if statement med gruppecheck.
+            if (args.length > 0 && args[0].equalsIgnoreCase("default")) {
+                String spawnName = args.length > 0 ? args[0].toLowerCase() : "default";
+                if (!player.hasPermission("thecore.spawn.teleport.*") || !player.hasPermission("thecore.spawn.teleport."+args[0].toLowerCase())) {
+                    spawnName = "default";
+                }
+            }
+            String spawnName = args.length > 0 ? args[0].toLowerCase() : "default";
             if (spawnLocations.containsKey(spawnName)) {
                 if (player.hasPermission("thecore.spawn.cooldown.bypass")) {
                     sender.sendMessage(ColorUtils.getColored(TheCore.getPrefix()) + " Du blev teleporteret til §b" + spawnName);
                     player.teleport(spawnLocations.get(spawnName));
                 } else {
-                    int cooldown = 5;
-                    sender.sendMessage(ColorUtils.getColored(TheCore.getPrefix()) + " Du bliver teleporteret til §b" + spawnName + " §7om §b" + cooldown + " §7sekunder.");
                     Location playerLocation = player.getLocation();
-                    if (playerLocation != player.getLocation()) {
-                        sender.sendMessage(ColorUtils.getColored(TheCore.getPrefix()) + " Du blev ikke teleporteret til §b" + spawnName + " §7fordi du bevægede dig.");
-                    }
+                    TaskUtils.runAsync(plugin, new Runnable() {
+                        int timeLeft = SPAWN_COOLDOWN.getInteger();
+                        @Override
+                        public void run() {
+                            if (player.getLocation().equals(playerLocation)) {
+                                if (timeLeft > 0) {
+                                    sender.sendMessage(ColorUtils.getColored(TheCore.getPrefix()) + " Du bliver teleporteret til §b" + spawnName + " §7om §b" + timeLeft + " §7sekunder.");
+                                    timeLeft--;
+                                    TaskUtils.runAsyncLater(plugin, this, 20L);
+                                } else {
+                                    sender.sendMessage(ColorUtils.getColored(TheCore.getPrefix()) + " Du blev teleporteret til §b" + spawnName);
+                                    player.teleport(spawnLocations.get(spawnName));
+                                }
+                            } else {
+                                sender.sendMessage(ColorUtils.getColored(TheCore.getPrefix()) + " Du blev ikke teleporteret til §b" + spawnName + " §7fordi du bevægede dig.");
+                            }
+                        }
+                    });
                 }
             } else {
                 sender.sendMessage(ColorUtils.getColored(TheCore.getPrefix()) + " Spawn §b" + spawnName + " §7findes ikke.");
@@ -82,6 +101,7 @@ public class SpawnCommand extends ICommand implements CommandExecutor, TabComple
             return true;
         }
     }
+
 
     @Override
     public List<String> onTabComplete(CommandSender commandSender, org.bukkit.command.Command command, String label, String[] strings) {
@@ -115,7 +135,7 @@ public class SpawnCommand extends ICommand implements CommandExecutor, TabComple
         }
     }
 
-    private void setSpawn(String group, Location location) throws IOException {
+    public static void setSpawn(String group, Location location) throws IOException {
         group = group.toLowerCase();
         spawnLocations.put(group, location);
         config.set(group+".world", location.getWorld().getName());

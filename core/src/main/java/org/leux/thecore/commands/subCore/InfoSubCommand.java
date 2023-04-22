@@ -4,7 +4,7 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.plugin.Plugin;
 import org.leux.TheCore;
 import org.leux.theapi.command.CommandResult;
-import org.leux.theapi.command.Result;
+import org.leux.theapi.enums.Result;
 import org.leux.theapi.command.ISubCommand;
 
 public class InfoSubCommand extends ISubCommand {

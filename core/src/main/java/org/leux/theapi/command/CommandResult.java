@@ -1,5 +1,7 @@
 package org.leux.theapi.command;
 
+import org.leux.theapi.enums.Result;
+
 public class CommandResult {
 
     private ISubCommand subCommand;

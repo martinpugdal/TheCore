@@ -16,7 +16,9 @@ public enum Config {
     MYSQL_DATABASE("mysql.database", "database", DataType.STRING),
     MYSQL_USERNAME("mysql.username", "username", DataType.STRING),
     MYSQL_PASSWORD("mysql.password", "password", DataType.STRING),
-    MYSQL_USE_SSL("mysql.use_ssl", Boolean.valueOf(false), DataType.BOOLEAN);
+    MYSQL_USE_SSL("mysql.use_ssl", Boolean.valueOf(false), DataType.BOOLEAN),
+
+    SPAWN_COOLDOWN("spawn.cooldown", Integer.valueOf(10), DataType.INTEGER);
 
     private final String path;
 

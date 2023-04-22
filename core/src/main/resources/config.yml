@@ -6,3 +6,6 @@ mysql:
   username: "root"
   password: "GGhrd2iv:_2e&v"
   use_ssl: false
+
+spawn:
+  cooldown: 5

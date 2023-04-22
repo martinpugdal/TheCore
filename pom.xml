@@ -85,7 +85,7 @@
     </build>
 
     <modules>
-        <module>gui</module>
+<!--        <module>gui</module>-->
         <module>core</module>
         <module>packaging</module>
     </modules>

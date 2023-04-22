@@ -2,13 +2,14 @@ package org.leux.thecore.commands;
 
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
+import org.bukkit.plugin.java.JavaPlugin;
 import org.leux.TheCore;
 import org.leux.theapi.command.ICommand;
 import org.leux.theapi.utils.ColorUtils;
 
 public class DiscordCommand extends ICommand implements CommandExecutor {
 
-    private final TheCore plugin;
+    private final JavaPlugin plugin;
 
     public DiscordCommand(String name, String description) {
         super(TheCore.getInstance());

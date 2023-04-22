@@ -3,6 +3,7 @@ package org.leux.thecore.commands;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.command.TabCompleter;
+import org.bukkit.plugin.java.JavaPlugin;
 import org.leux.TheCore;
 import org.leux.theapi.command.ICommand;
 import org.leux.theapi.command.CommandResult;
@@ -16,7 +17,7 @@ import java.util.List;
 
 public class CoreCommand extends ICommand implements CommandExecutor, TabCompleter {
 
-    private final TheCore plugin;
+    private final JavaPlugin plugin;
 
     public CoreCommand(String name, String description, List<String> aliases, List<ISubCommand> subCommands, boolean tabCompleter) {
         super(TheCore.getInstance());
@@ -52,10 +53,10 @@ public class CoreCommand extends ICommand implements CommandExecutor, TabComplet
             case SUCCESS:
                 return true;
             case WRONG_USAGE:
-                sender.sendMessage(ColorUtils.getColored(this.plugin.getPrefix()) + " Brug: §b" + commandResult.getSubCommand().getUsage(label));
+                sender.sendMessage(ColorUtils.getColored(TheCore.getPrefix()) + " Brug: §b" + commandResult.getSubCommand().getUsage(label));
                 return true;
             case NO_PERMISSION:
-                sender.sendMessage(ColorUtils.getColored(this.plugin.getPrefix()) + " Du har ikke adgang til at bruge denne kommando.");
+                sender.sendMessage(ColorUtils.getColored(TheCore.getPrefix()) + " Du har ikke adgang til at bruge denne kommando.");
                 return true;
             default:
                 sendHelpMessage(sender, label);
@@ -77,7 +78,7 @@ public class CoreCommand extends ICommand implements CommandExecutor, TabComplet
     private void sendHelpMessage(CommandSender sender, String label) {
         sender.sendMessage("§7§m----------------------------------------");
         sender.sendMessage("");
-        sender.sendMessage(ColorUtils.getColored(this.plugin.getPrefix()) + " §bCommands:");
+        sender.sendMessage(ColorUtils.getColored(TheCore.getPrefix()) + " §bCommands:");
         for (ISubCommand subCommand : super.getSubCommands()) {
             if (!hasPermission(sender, subCommand.getPermissions())) continue;
             sender.sendMessage(" §f- §b" + subCommand.getUsage(label) + " §f" + subCommand.getDescription());
