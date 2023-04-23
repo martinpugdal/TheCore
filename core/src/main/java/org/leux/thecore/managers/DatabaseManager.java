@@ -2,7 +2,7 @@ package org.leux.thecore.managers;
 
 import org.bukkit.Bukkit;
 import org.leux.TheCore;
-import org.leux.theapi.database.connectors.IConnector;
+import org.leux.theapi.interfaces.IConnector;
 import org.leux.theapi.database.connectors.MySQLConnector;
 import org.leux.theapi.database.connectors.SQLiteConnector;
 import org.leux.theapi.utils.ColorUtils;

@@ -4,15 +4,15 @@ import org.leux.theapi.enums.Result;
 
 public class CommandResult {
 
-    private ISubCommand subCommand;
+    private SubCommand subCommand;
     private final Result result;
 
-    public CommandResult(ISubCommand subCommand, Result result) {
+    public CommandResult(SubCommand subCommand, Result result) {
         this.subCommand = subCommand;
         this.result = result;
     }
 
-    public ISubCommand getSubCommand() {
+    public SubCommand getSubCommand() {
         return subCommand;
     }
 

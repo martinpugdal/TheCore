@@ -1,13 +1,13 @@
-package org.leux.thecore.commands.subCore;
+package org.leux.thecore.commands.subcore;
 
 import org.bukkit.command.CommandSender;
 import org.bukkit.plugin.Plugin;
 import org.leux.TheCore;
 import org.leux.theapi.command.CommandResult;
 import org.leux.theapi.enums.Result;
-import org.leux.theapi.command.ISubCommand;
+import org.leux.theapi.command.SubCommand;
 
-public class InfoSubCommand extends ISubCommand {
+public class InfoSubCommand extends SubCommand {
 
     private final TheCore plugin;
 

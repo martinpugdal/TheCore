@@ -8,8 +8,7 @@ import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.leux.TheCore;
-import org.leux.theapi.command.ICommand;
-import org.leux.theapi.command.ISubCommand;
+import org.leux.theapi.command.Command;
 import org.leux.theapi.utils.ColorUtils;
 import org.leux.theapi.utils.TaskUtils;
 
@@ -22,7 +21,7 @@ import java.util.List;
 
 import static org.leux.thecore.configuration.Config.SPAWN_COOLDOWN;
 
-public class SpawnCommand extends ICommand implements CommandExecutor, TabCompleter {
+public class SpawnCommand extends Command implements CommandExecutor, TabCompleter {
 
     private static HashMap<String, Location> spawnLocations;
     private static File file;
@@ -32,8 +31,8 @@ public class SpawnCommand extends ICommand implements CommandExecutor, TabComple
     public SpawnCommand(String name, String description, List<String> aliases, boolean tabCompleter) {
         super(TheCore.getInstance());
         this.plugin = TheCore.getInstance();
-        this.file = new File(plugin.getDataFolder(), "spawns.yml");
-        this.config = YamlConfiguration.loadConfiguration(file);
+        file = new File(plugin.getDataFolder(), "spawns.yml");
+        config = YamlConfiguration.loadConfiguration(file);
         plugin.getCommand(name).setExecutor(this);
         plugin.getCommand(name).setName(name);
         plugin.getCommand(name).setDescription(description);
@@ -59,13 +58,16 @@ public class SpawnCommand extends ICommand implements CommandExecutor, TabComple
     public boolean onCommand(CommandSender sender, org.bukkit.command.Command command, String label, String[] args) {
         if (sender instanceof Player) {
             Player player = (Player) sender;
-            // TODO: udskift denne if statement med gruppecheck.
-            if (args.length > 0 && args[0].equalsIgnoreCase("default")) {
-                String spawnName = args.length > 0 ? args[0].toLowerCase() : "default";
-                if (!player.hasPermission("thecore.spawn.teleport.*") || !player.hasPermission("thecore.spawn.teleport."+args[0].toLowerCase())) {
-                    spawnName = "default";
-                }
+
+            if (args.length > 0) {
+
             }
+//            if (args.length > 0 && args[0].equalsIgnoreCase("default")) {
+//                String spawnName = args.length > 0 ? args[0].toLowerCase() : "default";
+//                if (!player.hasPermission("thecore.spawn.teleport.*") || !player.hasPermission("thecore.spawn.teleport."+args[0].toLowerCase())) {
+//                    spawnName = "default";
+//                }
+//            }
             String spawnName = args.length > 0 ? args[0].toLowerCase() : "default";
             if (spawnLocations.containsKey(spawnName)) {
                 if (player.hasPermission("thecore.spawn.cooldown.bypass")) {
@@ -110,7 +112,7 @@ public class SpawnCommand extends ICommand implements CommandExecutor, TabComple
 
     private void loadSpawnLocations() {
         spawnLocations = new HashMap<>();
-        file = new File(TheCore.getInstance().getDataFolder(), "spawns.yml");
+        file = new File(this.plugin.getDataFolder(), "spawns.yml");
         try {
             if (file.exists()) {
                 config = YamlConfiguration.loadConfiguration(file);
@@ -127,7 +129,7 @@ public class SpawnCommand extends ICommand implements CommandExecutor, TabComple
                 double z = config.getDouble(key + ".z");
                 float yaw = (float) config.getDouble(key + ".yaw");
                 float pitch = (float) config.getDouble(key + ".pitch");
-                Location location = new Location(TheCore.getInstance().getServer().getWorld(world), x, y, z, yaw, pitch);
+                Location location = new Location(this.plugin.getServer().getWorld(world), x, y, z, yaw, pitch);
                 spawnLocations.put(key, location);
             });
         } catch (Exception e) {

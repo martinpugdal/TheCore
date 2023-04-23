@@ -3,14 +3,14 @@ package org.leux.theapi.command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.plugin.java.JavaPlugin;
 
-public abstract class ISubCommand extends ICommand {
+public abstract class SubCommand extends Command {
 
     private final String description;
     private final String usage;
     private final String[] permissions;
     private final String[] aliases;
 
-    public ISubCommand(JavaPlugin plugin, String description, String usage, String permission, String... aliases) {
+    public SubCommand(JavaPlugin plugin, String description, String usage, String permission, String... aliases) {
         super(plugin);
 
         this.description = description;
@@ -19,7 +19,7 @@ public abstract class ISubCommand extends ICommand {
         this.aliases = aliases;
     }
 
-    public ISubCommand(JavaPlugin plugin, String description, String usage, String[] permissions, String... aliases) {
+    public SubCommand(JavaPlugin plugin, String description, String usage, String[] permissions, String... aliases) {
         super(plugin);
 
         this.description = description;

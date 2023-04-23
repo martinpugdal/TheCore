@@ -10,6 +10,8 @@ import java.io.IOException;
 import java.util.List;
 
 public enum Config {
+    PREFIX("server.prefix", "&8[&6TheCore&8] &7", DataType.STRING),
+
     MYSQL_ENABLED("mysql.enabled", Boolean.valueOf(false), DataType.BOOLEAN),
     MYSQL_HOSTNAME("mysql.hostname", "localhost", DataType.STRING),
     MYSQL_PORT("mysql.port", Integer.valueOf(3306), DataType.INTEGER),

@@ -4,10 +4,10 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.leux.TheCore;
-import org.leux.theapi.command.ICommand;
+import org.leux.theapi.command.Command;
 import org.leux.theapi.utils.ColorUtils;
 
-public class DiscordCommand extends ICommand implements CommandExecutor {
+public class DiscordCommand extends Command implements CommandExecutor {
 
     private final JavaPlugin plugin;
 

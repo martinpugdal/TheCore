@@ -1,4 +1,4 @@
-package org.leux.theapi.database.connectors;
+package org.leux.theapi.interfaces;
 
 import java.sql.Connection;
 import java.sql.SQLException;

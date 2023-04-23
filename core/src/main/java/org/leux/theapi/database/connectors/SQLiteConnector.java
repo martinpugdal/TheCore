@@ -1,6 +1,7 @@
 package org.leux.theapi.database.connectors;
 
 import org.bukkit.plugin.Plugin;
+import org.leux.theapi.interfaces.IConnector;
 
 import java.io.File;
 import java.sql.Connection;

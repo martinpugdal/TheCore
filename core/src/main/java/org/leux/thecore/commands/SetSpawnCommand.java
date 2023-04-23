@@ -5,13 +5,13 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.leux.TheCore;
-import org.leux.theapi.command.ICommand;
+import org.leux.theapi.command.Command;
 
 import java.io.IOException;
 import java.util.Collections;
 import java.util.List;
 
-public class SetSpawnCommand extends ICommand implements CommandExecutor {
+public class SetSpawnCommand extends Command implements CommandExecutor {
 
     private final JavaPlugin plugin;
 

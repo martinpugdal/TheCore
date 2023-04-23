@@ -3,6 +3,7 @@ package org.leux.theapi.database.connectors;
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
 import org.bukkit.plugin.Plugin;
+import org.leux.theapi.interfaces.IConnector;
 
 import java.sql.Connection;
 import java.sql.SQLException;
