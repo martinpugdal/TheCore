@@ -45,10 +45,5 @@
             <version>1.7</version>
             <scope>provided</scope>
         </dependency>
-        <dependency>
-            <groupId>org.leux.thecore</groupId>
-            <artifactId>core</artifactId>
-            <version>1.0</version>
-        </dependency>
     </dependencies>
 </project>

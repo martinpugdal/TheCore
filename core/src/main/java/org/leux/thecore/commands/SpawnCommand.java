@@ -9,6 +9,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.leux.TheCore;
 import org.leux.theapi.command.Command;
+import org.leux.theapi.hook.hooks.VaultHook;
 import org.leux.theapi.utils.ColorUtils;
 import org.leux.theapi.utils.TaskUtils;
 
@@ -28,7 +29,7 @@ public class SpawnCommand extends Command implements CommandExecutor, TabComplet
     private final JavaPlugin plugin;
     private static YamlConfiguration config;
 
-    public SpawnCommand(String name, String description, List<String> aliases, boolean tabCompleter) {
+    public SpawnCommand(String name, String description, boolean tabCompleter) {
         super(TheCore.getInstance());
         this.plugin = TheCore.getInstance();
         file = new File(plugin.getDataFolder(), "spawns.yml");
@@ -39,9 +40,6 @@ public class SpawnCommand extends Command implements CommandExecutor, TabComplet
         if (tabCompleter) {
             plugin.getCommand(name).setTabCompleter(this);
         }
-        if (aliases != null) {
-            plugin.getCommand(name).setAliases(aliases);
-        }
         loadSpawnLocations();
     }
 
@@ -49,7 +47,6 @@ public class SpawnCommand extends Command implements CommandExecutor, TabComplet
         new SpawnCommand(
                 "spawn",
                 "spawn kommando",
-                Collections.singletonList("corespawn"),
                 true
         );
     }
@@ -58,38 +55,37 @@ public class SpawnCommand extends Command implements CommandExecutor, TabComplet
     public boolean onCommand(CommandSender sender, org.bukkit.command.Command command, String label, String[] args) {
         if (sender instanceof Player) {
             Player player = (Player) sender;
-
-            if (args.length > 0) {
-
-            }
-//            if (args.length > 0 && args[0].equalsIgnoreCase("default")) {
-//                String spawnName = args.length > 0 ? args[0].toLowerCase() : "default";
-//                if (!player.hasPermission("thecore.spawn.teleport.*") || !player.hasPermission("thecore.spawn.teleport."+args[0].toLowerCase())) {
-//                    spawnName = "default";
-//                }
-//            }
             String spawnName = args.length > 0 ? args[0].toLowerCase() : "default";
+            if (!spawnName.equals("default")) {
+                String playerGroup = VaultHook.getPrimaryGroup(player);
+                if (args.length > 0 && !player.hasPermission("thecore.spawn.teleport.*") && !player.hasPermission("thecore.spawn.teleport." + spawnName)) {
+                    spawnName = "default";
+                } else if (spawnLocations.containsKey(playerGroup)) {
+                    spawnName = playerGroup;
+                }
+            }
             if (spawnLocations.containsKey(spawnName)) {
                 if (player.hasPermission("thecore.spawn.cooldown.bypass")) {
-                    sender.sendMessage(ColorUtils.getColored(TheCore.getPrefix()) + " Du blev teleporteret til §b" + spawnName);
+                    sender.sendMessage(ColorUtils.getColored(TheCore.getPrefix()) + " Du blev teleporteret til §bspawn");
                     player.teleport(spawnLocations.get(spawnName));
                 } else {
                     Location playerLocation = player.getLocation();
+                    String finalSpawnName = spawnName;
                     TaskUtils.runAsync(plugin, new Runnable() {
                         int timeLeft = SPAWN_COOLDOWN.getInteger();
                         @Override
                         public void run() {
                             if (player.getLocation().equals(playerLocation)) {
                                 if (timeLeft > 0) {
-                                    sender.sendMessage(ColorUtils.getColored(TheCore.getPrefix()) + " Du bliver teleporteret til §b" + spawnName + " §7om §b" + timeLeft + " §7sekunder.");
+                                    sender.sendMessage(ColorUtils.getColored(TheCore.getPrefix()) + " Du bliver teleporteret til §bspawn §7om §b" + timeLeft + " §7sekunder.");
                                     timeLeft--;
                                     TaskUtils.runAsyncLater(plugin, this, 20L);
                                 } else {
-                                    sender.sendMessage(ColorUtils.getColored(TheCore.getPrefix()) + " Du blev teleporteret til §b" + spawnName);
-                                    player.teleport(spawnLocations.get(spawnName));
+                                    sender.sendMessage(ColorUtils.getColored(TheCore.getPrefix()) + " Du blev teleporteret til §bspawn");
+                                    player.teleport(spawnLocations.get(finalSpawnName));
                                 }
                             } else {
-                                sender.sendMessage(ColorUtils.getColored(TheCore.getPrefix()) + " Du blev ikke teleporteret til §b" + spawnName + " §7fordi du bevægede dig.");
+                                sender.sendMessage(ColorUtils.getColored(TheCore.getPrefix()) + " Du blev ikke teleporteret til §bspawn, §7fordi du bevægede dig.");
                             }
                         }
                     });
