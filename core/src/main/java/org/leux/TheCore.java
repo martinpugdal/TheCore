@@ -34,6 +34,7 @@ public final class TheCore extends JavaPlugin {
         Command.init();
         Listener.init();
         Config.init();
+        initialiseHooks();
 //        messages = new Message.init();
 
         databaseManager = new DatabaseManager();

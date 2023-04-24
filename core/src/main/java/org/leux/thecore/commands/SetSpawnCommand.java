@@ -54,7 +54,7 @@ public class SetSpawnCommand extends Command implements CommandExecutor {
                 }
                 if (view) {
                     location.setPitch(0);
-                    location.setYaw(0);
+                    location.setYaw(Math.round(location.getYaw()/45)*45);
                 }
             }
             try {

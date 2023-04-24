@@ -16,7 +16,6 @@ import org.leux.theapi.utils.TaskUtils;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 
@@ -55,14 +54,17 @@ public class SpawnCommand extends Command implements CommandExecutor, TabComplet
     public boolean onCommand(CommandSender sender, org.bukkit.command.Command command, String label, String[] args) {
         if (sender instanceof Player) {
             Player player = (Player) sender;
+            String playerGroup = VaultHook.getPlayerGroups(player)[0];
             String spawnName = args.length > 0 ? args[0].toLowerCase() : "default";
+            //TODO: fiks det her lort, det giver stress AAAAAAAAAAAAA
+            sender.sendMessage(VaultHook.getPlayerGroups(player));
             if (!spawnName.equals("default")) {
-                String playerGroup = VaultHook.getPrimaryGroup(player);
-                if (args.length > 0 && !player.hasPermission("thecore.spawn.teleport.*") && !player.hasPermission("thecore.spawn.teleport." + spawnName)) {
+                if (!player.hasPermission("thecore.spawn.teleport.*") || !player.hasPermission("thecore.spawn.teleport." + spawnName)) {
                     spawnName = "default";
-                } else if (spawnLocations.containsKey(playerGroup)) {
-                    spawnName = playerGroup;
                 }
+            }
+            if (spawnLocations.containsKey(playerGroup)) {
+                spawnName = playerGroup;
             }
             if (spawnLocations.containsKey(spawnName)) {
                 if (player.hasPermission("thecore.spawn.cooldown.bypass")) {
@@ -93,17 +95,25 @@ public class SpawnCommand extends Command implements CommandExecutor, TabComplet
             } else {
                 sender.sendMessage(ColorUtils.getColored(TheCore.getPrefix()) + " Spawn §b" + spawnName + " §7findes ikke.");
             }
-            return true;
         } else {
             sender.sendMessage(ColorUtils.getColored(TheCore.getPrefix()) + " Du skal være en spiller for at kunne bruge denne kommando.");
-            return true;
         }
+        return true;
     }
 
 
     @Override
-    public List<String> onTabComplete(CommandSender commandSender, org.bukkit.command.Command command, String label, String[] strings) {
-        return new ArrayList<>(spawnLocations.keySet());
+    public List<String> onTabComplete(CommandSender commandSender, org.bukkit.command.Command command, String label, String[] args) {
+        List<String> tabComplete = new ArrayList<>();
+        if (commandSender instanceof Player) {
+            Player player = (Player) commandSender;
+            spawnLocations.keySet().forEach(key -> {
+                if (player.hasPermission("thecore.spawn.teleport.*") || player.hasPermission("thecore.spawn.teleport." + key) && !key.equals("default")) {
+                    tabComplete.add(key);
+                }
+            });
+        }
+        return tabComplete;
     }
 
     private void loadSpawnLocations() {
