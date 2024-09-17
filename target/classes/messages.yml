@@ -1,7 +1,0 @@
-modules:
-  warp:
-    set: "Warp point set to {0}."
-    teleport: "Teleporting to {0}..."
-    no_permission: "You do not have permission to use this warp."
-    not_found: "Warp {0} not found."
-    list: "Available warps: {0}"
